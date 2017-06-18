@@ -9,18 +9,20 @@
     // searchResData.mater = "瓷";
     // searchResData.typ = "瓷器";
     // searchResData.sort = "级别从高到低";
-    var searchTag = main.doSea(transData).searchTag;
-    var searchResData = main.doSea(transData).data;
+    $(document).on("pageshow","#searchRes",function(){
 
-    $(document).find('.searchTag').text(searchTag);
+      var searchTag = main.doSea(transData).searchTag;
+      var searchResData = main.doSea(transData).data;
 
-    var $template = $(document).find('.all-item');
-    var $items = $(document).find('.all-items');
+      $(document).find('.searchTag').text(searchTag);
 
-    $(document).find('.all-item').remove();
+      var $template = $(document).find('.all-item');
+      var $items = $(document).find('.all-items');
+
+      $(document).find('.all-item').remove();
 
     searchResData.forEach(function (res) {
-                    
+
         var $item = $template.clone(true);
         var myimg = "http://kydww.sach.gov.cn" + res.img[0];
         $item.find('.myimg').attr('src', myimg);
@@ -33,5 +35,8 @@
     });
 
     $('button').bind('click', function() {
+        alert("123");
         console.log(transData);
     });
+});
+

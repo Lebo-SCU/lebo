@@ -64,9 +64,9 @@ main.getTypeDesc = function(type) {
 }
 
 
-main.doSea = function dosearch(searchResData) {
+main.doSea = function(searchResData) {
         var data = {};
-
+        console.log(searchResData);
         var searchTag = "首页>搜索";
         var urlList = "http://120.76.144.46:8080/solr/lebojson/select?indent=on&wt=json";
         if(searchResData.qes != null){
@@ -111,7 +111,7 @@ main.doSea = function dosearch(searchResData) {
             searchTag = searchTag + '>' + searchResData.sortlev;
             urlList = urlList + "&sort=" + searchResData.sort+" asc";
         }
-
+        console.log(urlList);
         main.doAjax({
 
             url:urlList,
