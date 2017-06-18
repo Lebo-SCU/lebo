@@ -22,11 +22,11 @@
         <fieldset data-role="controlgroup" data-type="horizontal">
             <legend>搜索</legend>
             <label for="wenwu">文物</label>
-            <input type="radio" name="search_content" id="wenwu" value="文物">
+            <input type="radio" name="search_content" id="wenwu" value=1>
             <label for="bowuguan">博物馆</label>
-            <input type="radio" name="search_content" id="bowuguan" value="博物馆">
+            <input type="radio" name="search_content" id="bowuguan" value=2>
             <label for="didian">地点</label>
-            <input type="radio" name="search_content" id="didian" value="地点">  
+            <input type="radio" name="search_content" id="didian" value=3>  
         </fieldset>
 
         <fieldset data-role="controlgroup" data-type="horizontal">
@@ -41,10 +41,10 @@
             <fieldset data-role="controlgroup">
                 <label for="tang">唐</label>
                 <input type="checkbox" name="dynasty" id="tang" value="唐">
-                <label for="song">宋</label>
-                <input type="checkbox" name="dynasty" id="song" value="宋">
-                <label for="yuan">元</label>
-                <input type="checkbox" name="dynasty" id="yuan" value="元"> 
+                <label for="xixia">西夏</label>
+                <input type="checkbox" name="dynasty" id="xixia" value="西夏">
+                <label for="ming">明</label>
+                <input type="checkbox" name="dynasty" id="ming" value="明"> 
             </fieldset>
         </div>
 
@@ -68,8 +68,7 @@
 
     </div>
 
-  <a href="#searchRes" data-transition="fade" class="ui-btn ui-btn-inline">搜索</a>
-
+    <button>按钮</button>
 
     <div data-role="footer" data-position="fixed">
         <h1>底部文本</h1>

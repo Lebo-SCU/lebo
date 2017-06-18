@@ -12,11 +12,13 @@ include "view/index/searchRes.php";
 
 
 <script>
+$.mobile.changePage("#searchRes");//
   try {
     App.restore();
 } catch (err) {
     App.load('home');
 }
+
 </script>
 
 

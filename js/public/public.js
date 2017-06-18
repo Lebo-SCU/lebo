@@ -1,4 +1,5 @@
 var main = {};
+var searchResData={};
 main.clickme =function(){
 	alert("hey");
 }
@@ -10,6 +11,8 @@ main.doAjax = function(params) {
     	dataType:'json',
 		success:function(response) {
 			console.log(response);
+			console.log(params.url);
+			
 			//返回成功
 			if (response.responseHeader) {
 				//如果有回调则执行回调
