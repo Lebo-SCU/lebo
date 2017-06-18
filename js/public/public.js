@@ -64,8 +64,8 @@ main.getTypeDesc = function(type) {
 }
 
 
-    function dosearch(searchResData) {
-                var data = {};
+main.doSea = function dosearch(searchResData) {
+        var data = {};
 
         var searchTag = "首页>搜索";
         var urlList = "http://120.76.144.46:8080/solr/lebojson/select?indent=on&wt=json";
@@ -112,13 +112,6 @@ main.getTypeDesc = function(type) {
             urlList = urlList + "&sort=" + searchResData.sort+" asc";
         }
 
-        // $(document).find('.searchTag').text(searchTag);
-
-        // var $template = $(document).find('.all-item');
-        // var $items = $(document).find('.all-items');
-
-        //     $(document).find('.all-item').remove();
-
         main.doAjax({
 
             url:urlList,
@@ -127,20 +120,9 @@ main.getTypeDesc = function(type) {
                 data['data'] = ret.response.docs;
                 data['searchTag'] = searchTag;
 
-                // ret.response.docs.forEach(function (res) {
-                    
-                //     var $item = $template.clone(true);
-                //     var myimg = "http://kydww.sach.gov.cn" + res.img[0];
-                //     $item.find('.myimg').attr('src', myimg);
-                //     $item.find('.relName').text(res.name);
-                //     $item.find('.dyn').text(res.productionDynasty);
-                //     $item.find('.level').text(main.getTypeDesc(res.level));
-                //     $item.find('.musName').text(res.museum_name);
-    	           //  $items.append($item);
-
-                // });
             }
         }); 
-                return data;
+        
+        return data;
         
     }

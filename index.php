@@ -10,7 +10,7 @@ include "view/index/searchRes.php";
 
 ?>
 
-
+<!-- 
 <script>
 $.mobile.changePage("#searchRes");//
   try {
@@ -19,7 +19,7 @@ $.mobile.changePage("#searchRes");//
     App.load('home');
 }
 
-</script>
+</script> -->
 
 
 
