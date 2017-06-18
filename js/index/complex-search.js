@@ -1,6 +1,5 @@
 $(document).on("pageshow","#complex-search",function(){ // 当进入页面二时
 
-	alert("123");
 	$(".submit").bind("click",function(){
 	    searchResData = {};
 
@@ -44,6 +43,7 @@ $(document).on("pageshow","#complex-search",function(){ // 当进入页面二时
 	  	} 
 		searchResData.mater = mater;
 		transData = searchResData;
+		// $.mobile.changePage({url:"#searchRes" , type:"get" , data:  }); 
 	});
 
 

@@ -15,7 +15,7 @@
             </div>
             <div class="col-xs-2">
                 <a class="submit" data-role="button" href="#searchRes" >Go</a>
-
+                <!-- <button class="submit" >Go</button> -->
             </div>
 
         </div>
