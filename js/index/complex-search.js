@@ -1,6 +1,6 @@
 
 
-$("input[type='submit']").bind("click",function(){
+$(".submit").bind("click",function(){
     searchResData = {};
 
 	searchResData.qes = $("input[name='search']").val();
@@ -26,7 +26,7 @@ $("input[type='submit']").bind("click",function(){
 	}
 	if ($("input[name='sort']").checked) {
 	searchResData.sortlev = $("input[name='sort']").val();
-		
+
 	}
 
 	var obj=document.getElementsByName('dynasty');   
@@ -42,11 +42,9 @@ $("input[type='submit']").bind("click",function(){
     	if(obj[i].checked)  mater.push(obj[i].value);  
   	} 
 	searchResData.mater = mater;
-	var test = dosearch(searchResData);
-	console.log(searchResData);
+	transData = searchResData;
 });
 
 
 $('button').bind('click', function() {
-            $.mobile.changePage("bootstrap-demo.html");//$('#selPage').popup('open');
 });

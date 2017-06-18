@@ -13,8 +13,9 @@
             <div class="col-xs-10">
                 <input type="search" name="search" id="search" placeholder="搜索内容...">
             </div>
-            <div class="col-xs-1">
-                <input type="submit" data-inline="true" value="Go">
+            <div class="col-xs-2">
+                <a class="submit" data-role="button" href="#searchRes" >Go</a>
+
             </div>
 
         </div>
@@ -68,8 +69,7 @@
 
     </div>
 
-    <button>按钮</button>
-
+           
     <div data-role="footer" data-position="fixed">
         <h1>底部文本</h1>
     </div>

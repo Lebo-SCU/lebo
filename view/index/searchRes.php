@@ -15,7 +15,7 @@
                     </tr>
                 </tbody>
             </table>
-            
+
         <ul class="all-items"  data-role="listview" >
 
                 <li class="all-item list-group-item" >
@@ -35,6 +35,7 @@
 
     </div>
 
+    <button>按钮</button>
 </div>
 
 <script src="js/index/searchRes.js"></script>

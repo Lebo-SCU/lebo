@@ -1,5 +1,6 @@
 var main = {};
 var searchResData={};
+var transData ={};
 main.clickme =function(){
 	alert("hey");
 }
@@ -12,7 +13,7 @@ main.doAjax = function(params) {
 		success:function(response) {
 			console.log(response);
 			console.log(params.url);
-			
+
 			//返回成功
 			if (response.responseHeader) {
 				//如果有回调则执行回调
@@ -64,6 +65,7 @@ main.getTypeDesc = function(type) {
 
 
     function dosearch(searchResData) {
+                var data = {};
 
         var searchTag = "首页>搜索";
         var urlList = "http://120.76.144.46:8080/solr/lebojson/select?indent=on&wt=json";
@@ -122,10 +124,8 @@ main.getTypeDesc = function(type) {
             url:urlList,
             success:function(ret) { 
 
-                var data = {};
                 data['data'] = ret.response.docs;
                 data['searchTag'] = searchTag;
-                return data;
 
                 // ret.response.docs.forEach(function (res) {
                     
@@ -141,4 +141,6 @@ main.getTypeDesc = function(type) {
                 // });
             }
         }); 
+                return data;
+        
     }
