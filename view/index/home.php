@@ -8,7 +8,7 @@
 	<p>欢迎! 点击以下链接跳转到高级搜索页面。 </p>
 		<a href="#complex-search">跳转到高级搜索页面</a>
 	</div>
-
+	<a href="#searchRes" data-transition="fade" class="ui-btn ui-btn-inline">搜索</a>
 	<div data-role="footer">
 		<h1>底部文本</h1>
 	</div>

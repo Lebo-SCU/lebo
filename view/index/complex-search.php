@@ -68,11 +68,16 @@
 
     </div>
 
+  <a href="#searchRes" data-transition="fade" class="ui-btn ui-btn-inline">搜索</a>
 
 
     <div data-role="footer" data-position="fixed">
         <h1>底部文本</h1>
     </div>
+
+  </div>
+
+
 </div>
 
 

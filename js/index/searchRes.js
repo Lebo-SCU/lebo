@@ -1,65 +1,66 @@
-    var pageData={};
-    //pageData.qes = "甘肃瓷器";
-    //pageData.lab = "一级";
-    //pageData.labTy = "level";
-    pageData.loc = "甘肃省";
-    pageData.relName = "白瓷";
-    pageData.musName = "西河";
-    pageData.dyn = "宋";
-    //pageData.level = "一级";
-    pageData.mater = "瓷";
-    pageData.typ = "瓷器";
-    pageData.sortlev = "级别从高到低";
+    var searchResData={};
+    //searchResData.qes = "甘肃瓷器";
+    //searchResData.lab = "一级";
+    //searchResData.labTy = "level";
+    searchResData.loc = "甘肃省";
+    searchResData.relName = "白瓷";
+    searchResData.musName = "西河";
+    searchResData.dyn = "宋";
+    //searchResData.level = "一级";
+    searchResData.mater = "瓷";
+    searchResData.typ = "瓷器";
+    searchResData.sortlev = "级别从高到低";
 
     var searchTag = "首页>搜索";
     var urlList = "http://120.76.144.46:8080/solr/lebojson/select?indent=on&wt=json";
-    if(pageData.qes != null){
-        searchTag = searchTag + '>' + pageData.qes;
-        urlList = urlList + "&q=" + pageData.qes;
+    if(searchResData.qes != null){
+        searchTag = searchTag + '>' + searchResData.qes;
+        urlList = urlList + "&q=" + searchResData.qes;
     }else{
         urlList = urlList + "&q=*:*";
     }
-    if(pageData.lab != null){
-        searchTag = searchTag + '>' + pageData.lab;
-        urlList = urlList + "&fq=" + pageData.labTy + ":" + pageData.lab;
+    if(searchResData.lab != null){
+        searchTag = searchTag + '>' + searchResData.lab;
+        urlList = urlList + "&fq=" + searchResData.labTy + ":" + searchResData.lab;
     }
-    if(pageData.loc != null){
-        searchTag = searchTag + '>' + pageData.loc;
-        urlList = urlList + "&fq=location:" + pageData.loc;
+    if(searchResData.loc != null){
+        searchTag = searchTag + '>' + searchResData.loc;
+        urlList = urlList + "&fq=location:" + searchResData.loc;
     }
-    if(pageData.relName != null){
-        searchTag = searchTag + '>' + pageData.relName;
-        urlList = urlList + "&fq=name:" + pageData.relName;
+    if(searchResData.relName != null){
+        searchTag = searchTag + '>' + searchResData.relName;
+        urlList = urlList + "&fq=name:" + searchResData.relName;
     }
-    if(pageData.musName != null){
-        searchTag = searchTag + '>' + pageData.musName;
-        urlList = urlList + "&fq=museum_name:" + pageData.musName;
+    if(searchResData.musName != null){
+        searchTag = searchTag + '>' + searchResData.musName;
+        urlList = urlList + "&fq=museum_name:" + searchResData.musName;
     }
-    if(pageData.dyn != null){
-        searchTag = searchTag + '>' + pageData.dyn;
-        urlList = urlList + "&fq=productionDynasty:" + pageData.dyn;
+    if(searchResData.dyn != null){
+        searchTag = searchTag + '>' + searchResData.dyn;
+        urlList = urlList + "&fq=productionDynasty:" + searchResData.dyn;
     }
-    if(pageData.level != null){
-        searchTag = searchTag + '>' + pageData.level;
-        urlList = urlList + "&fq=level:" + pageData.level;
+    if(searchResData.level != null){
+        searchTag = searchTag + '>' + searchResData.level;
+        urlList = urlList + "&fq=level:" + searchResData.level;
     }
-    if(pageData.mater != null){
-        searchTag = searchTag + '>' + pageData.mater;
-        urlList = urlList + "&fq=materials:" + pageData.mater;
+    if(searchResData.mater != null){
+        searchTag = searchTag + '>' + searchResData.mater;
+        urlList = urlList + "&fq=materials:" + searchResData.mater;
     }
-    if(pageData.typ != null){
-        searchTag = searchTag + '>' + pageData.typ;
-        urlList = urlList + "&fq=propertyType:" + pageData.typ;
+    if(searchResData.typ != null){
+        searchTag = searchTag + '>' + searchResData.typ;
+        urlList = urlList + "&fq=propertyType:" + searchResData.typ;
     }
-    if(pageData.sortlev != null){
-        searchTag = searchTag + '>' + pageData.sortlev;
+    if(searchResData.sortlev != null){
+        searchTag = searchTag + '>' + searchResData.sortlev;
     }
 
+    $(document).find('.searchTag').text(searchTag);
 
-    var $template = $(page).find('.all-item');
-    var $items = $(page).find('.all-items');
+    var $template = $(document).find('.all-item');
+    var $items = $(document).find('.all-items');
 
-        $(page).find('.all-item').remove();
+        $(document).find('.all-item').remove();
 
         main.doAjax({
 
