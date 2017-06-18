@@ -9,30 +9,41 @@
     // searchResData.mater = "瓷";
     // searchResData.typ = "瓷器";
     // searchResData.sort = "级别从高到低";
-    $(document).on("pageshow","#searchRes",function(){
 
-      var searchTag = main.doSea(transData).searchTag;
-      var searchResData = main.doSea(transData).data;
+$(document).on("pageshow","#searchRes",function(){
 
-      $(document).find('.searchTag').text(searchTag);
+        var mainData = main.doSea(transData);
+        
+        $(document).find('.searchTag').text(mainData.searchTag);
 
-      var $template = $(document).find('.all-item');
-      var $items = $(document).find('.all-items');
+        var $template = $(document).find('.all-item');
+        var $items = $(document).find('.all-items');
 
-      $(document).find('.all-item').remove();
+        $(document).find('.all-item').remove();
 
-    // searchResData.forEach(function (res) {
+        main.doAjax({
 
-    //     var $item = $template.clone(true);
-    //     var myimg = "http://kydww.sach.gov.cn" + res.img[0];
-    //     $item.find('.myimg').attr('src', myimg);
-    //     $item.find('.relName').text(res.name);
-    //     $item.find('.dyn').text(res.productionDynasty);
-    //     $item.find('.level').text(main.getTypeDesc(res.level));
-    //     $item.find('.musName').text(res.museum_name);
-    //     $items.append($item);
+            url:mainData.urlList,
+            success:function(ret) { 
 
-    // });
+                ret.response.docs.forEach(function (res) {
+                    
+                    var $item = $template.clone(true);
+                    var myimg = "http://kydww.sach.gov.cn" + res.img[0];
+                    $item.find('.myimg').attr('src', myimg);
+                    $item.find('.relName').text(res.name);
+                    $item.find('.dyn').text(res.productionDynasty);
+                    $item.find('.level').text(main.getTypeDesc(res.level));
+                    $item.find('.musName').text(res.museum_name);
+                    $items.append($item);
+
+                });
+                
+
+            }
+        }); 
+
+
 
     $('button').bind('click', function() {
         $.mobile.changePage("#complex-search", "slideup");

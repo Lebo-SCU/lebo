@@ -69,59 +69,59 @@ main.doSea = function(searchResData) {
         console.log(searchResData);
         var searchTag = "首页>搜索";
         var urlList = "http://120.76.144.46:8080/solr/lebojson/select?indent=on&wt=json";
-        if(searchResData.qes != null){
+        if(searchResData.qes != undefined){
             searchTag = searchTag + '>' + searchResData.qes;
             urlList = urlList + "&q=" + searchResData.qes;
         }else{
             urlList = urlList + "&q=*:*";
         }
-        if(searchResData.lab != null){
+        if(searchResData.lab != undefined){
             searchTag = searchTag + '>' + searchResData.lab;
             urlList = urlList + "&fq=" + searchResData.labTy + ":" + searchResData.lab;
         }
-        if(searchResData.loc != null){
+        if(searchResData.loc != undefined){
             searchTag = searchTag + '>' + searchResData.loc;
             urlList = urlList + "&fq=location:" + searchResData.loc;
         }
-        if(searchResData.relName != null){
+        if(searchResData.relName != undefined){
             searchTag = searchTag + '>' + searchResData.relName;
             urlList = urlList + "&fq=name:" + searchResData.relName;
         }
-        if(searchResData.musName != null){
+        if(searchResData.musName != undefined){
             searchTag = searchTag + '>' + searchResData.musName;
             urlList = urlList + "&fq=museum_name:" + searchResData.musName;
         }
-        if(searchResData.dyn != null){
-            searchTag = searchTag + '>' + searchResData.dyn;
-            urlList = urlList + "&fq=productionDynasty:" + searchResData.dyn;
+        if(searchResData.dyn[0] != undefined){
+            searchResData.dyn.foreach(function(dyn){
+                searchTag = searchTag + '>' + dyn;
+                urlList = urlList + "&fq=productionDynasty:" + dyn;
+            });
         }
-        if(searchResData.level != null){
+        if(searchResData.level != undefined){
             searchTag = searchTag + '>' + searchResData.level;
             urlList = urlList + "&fq=level:" + searchResData.level;
         }
-        if(searchResData.mater != null){
-            searchTag = searchTag + '>' + searchResData.mater;
-            urlList = urlList + "&fq=materials:" + searchResData.mater;
+        if(searchResData.mater[0] != undefined){
+            searchResData.mater.foreach(function(mater){
+                searchTag = searchTag + '>' + mater;
+                urlList = urlList + "&fq=materials:" + mater;
+            });
+            
         }
-        if(searchResData.typ != null){
-            searchTag = searchTag + '>' + searchResData.typ;
-            urlList = urlList + "&fq=propertyType:" + searchResData.typ;
-        }
-        if(searchResData.sort!= null){
+        // if(searchResData.typ[0] != undefined){
+        //     searchResData.typ.foreach(function(typ){
+        //         searchTag = searchTag + '>' + typ;
+        //         urlList = urlList + "&fq=propertyType:" + typ;
+        //     });
+        // }
+        if(searchResData.sort!= undefined){
             searchTag = searchTag + '>' + searchResData.sortlev;
             urlList = urlList + "&sort=" + searchResData.sort+" asc";
         }
         console.log(urlList);
-        main.doAjax({
-
-            url:urlList,
-            success:function(ret) { 
-
-                data['data'] = ret.response.docs;
-                data['searchTag'] = searchTag;
-
-            }
-        }); 
+        
+        data['urlList'] = urlList;
+        data['searchTag'] = searchTag;
         
         return data;
         

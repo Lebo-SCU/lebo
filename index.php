@@ -7,11 +7,12 @@ include "view/public/header.php";
 include "view/index/home.php";
 include "view/index/complex-search.php";
 include "view/index/searchRes.php";
+include "view/index/searchDetails.php";
 
 ?>
 
-<!-- 
-<script>
+
+<!-- <script>
 $.mobile.changePage("#searchRes");//
   try {
     App.restore();

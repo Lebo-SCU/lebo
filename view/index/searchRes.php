@@ -15,7 +15,6 @@
                     </tr>
                 </tbody>
             </table>
-    <button>按钮</button>
 
         <ul class="all-items"  data-role="listview" >
 
