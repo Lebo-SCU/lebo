@@ -1,14 +1,13 @@
-<load href="css/index/searchRes.css" />
+<link rel="stylesheet" href="css/index/searchRes.css">
 
-<div class="app-page page-searchRes" data-page="searchRes">
-  
-        <div class="app-topbar">
-            <div class="app-button left" data-back>返回</div>
-            <div class="app-title">乐博</div>
-            
-        </div>
+<div data-role="page" id="searchRes">
 
-        <div class="app-content">
+    <div data-role="header">
+        <a href="" data-role="button" data-rel="back">返回</a>
+        <h1>乐博</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
             <table class="table table-striped">
                 <tbody>
                     <tr>
@@ -17,8 +16,9 @@
                 </tbody>
             </table>
 
+        <div data-role="listview">
             <div class="all-items">
-                <div class="app-section all-item list-group-item">
+                <div class="all-item list-group-item">
                     <img class="myimg" src="images/wrong.jpeg" width="280" onerror="main.avatar_error()" />
                     <div class="relName"></div>
                     <div class="container">
@@ -32,7 +32,10 @@
                     </div>
                 </div>
             </div>
-
         </div>
+
+    </div>
+
 </div>
 
+<script src="js/index/searchRes.js"></script>

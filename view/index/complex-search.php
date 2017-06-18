@@ -7,7 +7,7 @@
   <div data-role="main" class="ui-content">
 
   </div>
-
+  <a href="#searchRes" data-transition="fade" class="ui-btn ui-btn-inline">搜索</a>
   <div data-role="footer">
     <h1>底部文本</h1>
   </div>

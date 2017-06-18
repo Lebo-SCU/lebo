@@ -23,7 +23,6 @@
 	<script src="js/public/public.js"></script>
 
 
-	<script src="js/index/searchRes.js"></script>
 
 	
 </head>
