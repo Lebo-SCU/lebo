@@ -74,39 +74,40 @@ main.doSea = function(searchResData) {
         if(searchResData.qes != undefined){
             searchTag = searchTag + '>' + searchResData.qes;
             urlList = urlList + "&q=" + searchResData.qes;
-        }else{
+        }else if(searchResData.loc==undefined && searchResData.relName==undefined&&searchResData.musName==undefined&&searchResData.dyn.length==0
+            &&searchResData.level==undefined&&searchResData.mater.length==0){
             urlList = urlList + "&q=*:*";
         }
         if(searchResData.lab != undefined){
             searchTag = searchTag + '>' + searchResData.lab;
-            urlList = urlList + "&fq=" + searchResData.labTy + ":" + searchResData.lab;
+            urlList = urlList + "&q=" + searchResData.labTy + ":" + searchResData.lab;
         }
         if(searchResData.loc != undefined){
             searchTag = searchTag + '>行政区划：' + searchResData.loc;
-            urlList = urlList + "&fq=location:" + searchResData.loc;
+            urlList = urlList + "&q=location:" + searchResData.loc;
         }
         if(searchResData.relName != undefined){
             searchTag = searchTag + '>文物名：' + searchResData.relName;
-            urlList = urlList + "&fq=name:" + searchResData.relName;
+            urlList = urlList + "&q=name:" + searchResData.relName;
         }
         if(searchResData.musName != undefined){
             searchTag = searchTag + '>博物馆名：' + searchResData.musName;
-            urlList = urlList + "&fq=museum_name:" + searchResData.musName;
+            urlList = urlList + "&q=museum_name:" + searchResData.musName;
         }
         if(searchResData.dyn != undefined){
             searchResData.dyn.forEach(function(dyn){
-                searchTag = searchTag + '>' + dyn;
-                urlList = urlList + "&fq=productionDynasty:" + dyn;
+                searchTag = searchTag + '>朝代：' + dyn;
+                urlList = urlList + "&q=productionDynasty:" + dyn;
             });
         }
         if(searchResData.level != undefined){
-            searchTag = searchTag + '>' + searchResData.level;
-            urlList = urlList + "&fq=level:" + searchResData.level;
+            searchTag = searchTag + '>级别：' + searchResData.level;
+            urlList = urlList + "&q=level:" + searchResData.level;
         }
         if(searchResData.mater != undefined){
             searchResData.mater.forEach(function(mater){
-                searchTag = searchTag + '>' + mater;
-                urlList = urlList + "&fq=materials:" + mater;
+                searchTag = searchTag + '>质地：' + mater;
+                urlList = urlList + "&q=materials:" + mater;
             });
             
         }
@@ -117,7 +118,7 @@ main.doSea = function(searchResData) {
         //     });
         // }
         if(searchResData.sortlev!= undefined){
-            searchTag = searchTag + '>' + searchResData.sortlev;
+            searchTag = searchTag + '>级别从高到低';
             urlList = urlList + "&sort=" + searchResData.sortlev+" asc";
         }
         if(searchResData.start != undefined){
