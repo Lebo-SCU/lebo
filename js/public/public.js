@@ -70,9 +70,7 @@ main.doSea = function(searchResData) {
         console.log(searchResData);
         var searchTag = "首页>搜索";
         var urlList = "http://120.76.144.46:8080/solr/lebojson/select?indent=on&wt=json";
-        if(searchResData.start != undefined){
-            urlList = urlList + "&start=" + searchResData.start;
-        }
+        
         if(searchResData.qes != undefined){
             searchTag = searchTag + '>' + searchResData.qes;
             urlList = urlList + "&q=" + searchResData.qes;
@@ -118,9 +116,12 @@ main.doSea = function(searchResData) {
         //         urlList = urlList + "&fq=propertyType:" + typ;
         //     });
         // }
-        if(searchResData.sort!= undefined){
+        if(searchResData.sortlev!= undefined){
             searchTag = searchTag + '>' + searchResData.sortlev;
-            urlList = urlList + "&sort=" + searchResData.sort+" asc";
+            urlList = urlList + "&sort=" + searchResData.sortlev+" asc";
+        }
+        if(searchResData.start != undefined){
+            urlList = urlList + "&start=" + searchResData.start;
         }
         console.log(urlList);
         
