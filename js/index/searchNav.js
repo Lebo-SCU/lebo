@@ -38,4 +38,10 @@ $(document).on("pageshow","#searchNav",function(){
         });    
     });
 
+    $(function () { $('#collapseTwo').collapse('show')});
+    $(function () { $('#collapseThree').collapse('show')});
+    $(function () { $('#collapseFour').collapse('show')});
+    $(function () { $('#collapseFive').collapse('show')});
+    $(function () { $('#collapseSix').collapse('show')});
+
 });

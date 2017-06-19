@@ -8,16 +8,9 @@
     </div>
 
     <div data-role="main" class="ui-content">
-        <table class="table table-striped">
-            <tbody>
-                <tr>
-                    <td class="searchTag"></td>
-                </tr>
-            </tbody>
-        </table>
+        <h5 class="searchTag"></h5>
 
-        <ul class="all-items"  data-role="listview" >
-
+        <ul class="all-items"  data-role="listview"  data-inset="true">
                 <li class="all-item list-group-item" >
                     <img class="myimg" src="images/wrong.jpeg" width="280" onerror="main.avatar_error()" />
                     <div class="relName"></div>
@@ -26,7 +19,7 @@
                             <div class="details">
                                 <div class="dyn col-xs-10"></div>
                                 <div class="level col-xs-2"></div>
-                                <div class="musName col-xs-12"></div>
+                                <div class="musName col-xs-12" ></div>
                             </div>
                         </div>
                     </div>

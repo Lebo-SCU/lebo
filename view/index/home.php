@@ -11,14 +11,25 @@
 		<input type="search" name="homeSer" id="homeSer" placeholder="搜索内容...">
 
 		<h4> 
-			<a class="daohang" id="taoqi" href="#searchRes">
+			<a class="homeTag" id="taoqi" href="#searchRes">
 				<span class="label label-info">陶器</span>
 			</a>
-			<a class="daohang" id="shufa" href="#searchRes">
+			<a class="homeTag" id="shufa" href="#searchRes">
 				<span class="label label-success">书法</span>
 			</a>
-			<a class="daohang" id="jiagu" href="#searchRes">
+			<a class="homeTag" id="jiagu" href="#searchRes">
 				<span class="label label-warning">甲骨</span>
+			</a>
+			<a class="homeTag" id="relic" href="#searchRes">
+				<span class="label label-danger">一级文物</span>
+			</a>
+		</h4>
+		<h4>
+			<a class="homeTag" id="tong" href="#searchRes">
+				<span class="label label-danger">青铜方鼎</span>
+			</a>
+			<a class="homeTag" id="poem" href="#searchRes">
+				<span class="label label-info">唐诗宋词</span>
 			</a>
 		</h4>
 
