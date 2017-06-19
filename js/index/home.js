@@ -17,7 +17,7 @@
     	transData.labTy="propertyType";
     });
 
-    $('#search').bind('click', function() {
+    $('#homeSer').bind('click', function() {
         $.mobile.changePage("#normal-search");
     });
 });

@@ -8,7 +8,7 @@
 
 	<h1><p class="text-center">乐博</p></h1>
 	<h3><p class="text-center">Lebo</p></h3>
-	<input type="search" name="search" id="search" placeholder="搜索内容...">
+	<input type="search" name="homeSer" id="homeSer" placeholder="搜索内容...">
 
 	<div class="col-xs-10" >
 		<a class="daohang" id="taoqi" href="#searchRes">陶器</a>

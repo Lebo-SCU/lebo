@@ -1,5 +1,6 @@
 <div data-role="page" id="searchNav">
   <div data-role="header">
+    <a href="" data-role="button" data-rel="back">返回</a>
     <h1>乐博</h1>
   </div>
   
