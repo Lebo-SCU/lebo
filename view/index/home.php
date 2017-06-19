@@ -33,10 +33,27 @@
 		</h4>
 
 
+		<ul class="all-items"  data-role="listview"  data-inset="true">
+            <li class="all-item list-group-item" >
+                <img class="myimg" src="images/wrong.jpeg" width="280" onerror="main.avatar_error()" />
+                <div class="relName"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="details">
+                            <div class="dyn col-xs-10"></div>
+                            <div class="level col-xs-2"></div>
+                            <div class="musName col-xs-12" ></div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+
 	
 	</div>
 
-	<div data-role="footer" style="text-align:center;">
+	<div data-role="footer" style="text-align:center;" data-position="fixed">
     	<div data-role="controlgroup" data-type="horizontal">
       		<a href="#searchNav" class="ui-btn ui-corner-all ui-shadow ui-icon-navigation ui-btn-icon-left" data-transition="fade">搜索导航</a>
 			<a href="#complex-search" class="ui-btn ui-corner-all ui-shadow ui-icon-search ui-btn-icon-left"  data-transition="fade">高级搜索</a>  
