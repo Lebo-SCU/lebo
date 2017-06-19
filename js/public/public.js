@@ -70,8 +70,12 @@ main.doSea = function(searchResData) {
         var searchTag = "首页>搜索";
         var urlList = "http://120.76.144.46:8080/solr/lebojson/select?indent=on&wt=json";
         if(searchResData.qes != undefined){
-            searchTag = searchTag + '>' + searchResData.qes;
-            urlList = urlList + "&q=" + searchResData.qes;
+            if (searchResData.qes == "") {
+                urlList = urlList + "&q=*:*";
+            }else{
+                searchTag = searchTag + '>' + searchResData.qes;
+                urlList = urlList + "&q=" + searchResData.qes;
+            }
         }else{
             urlList = urlList + "&q=*:*";
         }
