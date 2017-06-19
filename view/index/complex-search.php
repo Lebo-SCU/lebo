@@ -2,7 +2,7 @@
 <div data-role="page" id="complex-search">
 
     <div data-role="header">
-        <a href="#home" class="ui-btn ui-icon-arrow-l ui-btn-icon-left"></a>
+        <a href="" data-role="button" data-rel="back">返回</a>
         <h1>这是高级搜索页面</h1>
     </div>
 

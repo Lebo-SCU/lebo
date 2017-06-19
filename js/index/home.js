@@ -1,5 +1,6 @@
 ﻿$(document).on("pageshow","#home",function(){
 
+
     $('#taoqi').bind('click', function() {
     	transData = {};
     	transData.lab ="陶器";
@@ -14,5 +15,9 @@
     	transData = {};
     	transData.lab ="甲骨";
     	transData.labTy="propertyType";
+    });
+
+    $('#search').bind('click', function() {
+        $.mobile.changePage("#normal-search");
     });
 });

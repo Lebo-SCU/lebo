@@ -6,6 +6,7 @@ include "view/public/header.php";
 //包含各个页面的php
 include "view/index/home.php";
 include "view/index/complex-search.php";
+include "view/index/normal-search.php";
 include "view/index/searchRes.php";
 include "view/index/searchDetails.php";
 
