@@ -9,8 +9,8 @@
     // searchResData.mater = "瓷";
     // searchResData.typ = "瓷器";
     // searchResData.sort = "级别从高到低";
-var $template = $(document).find('#searchRes .all-item');
-var $items = $(document).find('#searchRes .all-items');
+var $template = $(document).find('.all-item');
+var $items = $(document).find('.all-items');
 
 
 

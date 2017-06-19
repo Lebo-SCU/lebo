@@ -1,36 +1,51 @@
-﻿
+﻿var $homeTemplate = $(document).find('.home-item');
+var $homeItems = $(document).find('.home-items');
+    
 
 $(document).on("pagebeforeshow","#home",function(){ 
-	$("li").remove();
+	$("li.home-item").remove();
 });
 
 
 $(document).on("pageshow","#home",function(){
-	var $template = $(document).find('#home .all-item');
-	var $items = $(document).find('#home .all-items');
-	console.log(main.doRadom());
-    // for ( var i = 0; i<3;i++){
-    //     var random_list = {};
-    //     random_list = main.doRadom();
+	
+    for ( var i = 0; i<3;i++){
+        var random_list = {};
         
-    //     console.log(random_list.name);
-    //     var $item = $template.clone(true);
-    //     var myimg = "http://kydww.sach.gov.cn" + random_list.img[0];
-    //     $item.find('.myimg').attr('src', myimg);
-    //     $item.find('.relName').text(random_list.name);
-    //     $item.find('.dyn').text(random_list.productionDynasty);
-    //     $item.find('.level').text(main.getTypeDesc(random_list.level));
-    //     $item.find('.musName').text(random_list.museum_name);
-    //     $items.append($item);
-    //     $item.bind("click", function(){
-    //         //transData = {};
-    //         searchDet = random_list;
-    //         $.mobile.changePage("#searchDetails"); 
+        var random = parseInt(Math.random()*100000%13404);
+        var homeUrl = "http://120.76.144.46:8080/solr/lebojson/select?indent=on&wt=json&q=*:*&start="+random;
+        main.doAjax({
+        
+            url:homeUrl,
 
-    //     });
+            success:function(ret) { 
+            
+                console.log(ret.response.docs[0]);
+                random_list = ret.response.docs[0];
+            
+
+        
+        console.log(random_list);
+        var $item = $homeTemplate.clone(true);
+        var myimg = "http://kydww.sach.gov.cn" + random_list.img[0];
+        $item.find('.homeMyimg').attr('src', myimg);
+        $item.find('.homeRelName').text(random_list.name);
+        $item.find('.home-dyn').text(random_list.productionDynasty);
+        $item.find('.home-level').text(main.getTypeDesc(random_list.level));
+        $item.find('.home-musName').text(random_list.museum_name);
+        $homeItems.append($item);
+        $item.bind("click", function(){
+            //transData = {};
+            searchDet = random_list;
+            $.mobile.changePage("#searchDetails"); 
+
+        });
+
+            }
+        }); 
 
 
-    // }
+    }
 
     $('#taoqi').bind('click', function() {
     	transData = {};
