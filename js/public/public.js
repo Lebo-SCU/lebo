@@ -117,25 +117,25 @@ main.doSea = function(searchResData) {
             }
 
         }
+
         if(searchResData.lab != undefined){
             searchTag = searchTag + '>' + searchResData.lab;
-            urlList = urlList + "&fq=" + searchResData.labTy + ":" + searchResData.lab;
+            urlList = urlList + "&q=" + searchResData.labTy + ":" + searchResData.lab;
         }
-
         if(searchResData.dyn != undefined){
             searchResData.dyn.forEach(function(dyn){
-                searchTag = searchTag + '>' + dyn;
-                urlList = urlList + "&fq=productionDynasty:" + dyn;
+                searchTag = searchTag + '>朝代：' + dyn;
+                urlList = urlList + "&q=productionDynasty:" + dyn;
             });
         }
         if(searchResData.level != undefined){
-            searchTag = searchTag + '>' + searchResData.level;
-            urlList = urlList + "&fq=level:" + searchResData.level;
+            searchTag = searchTag + '>级别：' + searchResData.level;
+            urlList = urlList + "&q=level:" + searchResData.level;
         }
         if(searchResData.mater != undefined){
             searchResData.mater.forEach(function(mater){
-                searchTag = searchTag + '>' + mater;
-                urlList = urlList + "&fq=materials:" + mater;
+                searchTag = searchTag + '>质地：' + mater;
+                urlList = urlList + "&q=materials:" + mater;
             });
             
         }
@@ -146,7 +146,7 @@ main.doSea = function(searchResData) {
         //     });
         // }
         if(searchResData.sortlev!= undefined){
-            searchTag = searchTag + '>' + searchResData.sortlev;
+            searchTag = searchTag + '>级别从高到低';
             urlList = urlList + "&sort=" + searchResData.sortlev+" asc";
         }
         if(searchResData.start != undefined){
