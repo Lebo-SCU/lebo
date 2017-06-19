@@ -24,8 +24,8 @@
                     <div class="container">
                         <div class="row">
                             <div class="details">
-                                <div class="dyn col-xs-6"></div>
-                                <div class="level col-xs-6"></div>
+                                <div class="dyn col-xs-10"></div>
+                                <div class="level col-xs-2"></div>
                                 <div class="musName col-xs-12"></div>
                             </div>
                         </div>
