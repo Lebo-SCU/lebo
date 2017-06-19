@@ -1,30 +1,37 @@
 ﻿<link rel="stylesheet" href="css/index/home.css">
 <div data-role="page" id="home">
 	<div data-role="header">
-		<h1>这是乐博主页</h1>
+		<h1>乐博Lebo</h1>
 	</div>
 
 	<div data-role="main" class="ui-content">
-	<div class="homeBg">
-	<img class="homeBgImg" src="images/bg.png" width="200" align="center">
-	<!-- <h1><p class="text-center">乐博</p></h1>
-	<h3><p class="text-center">Lebo</p></h3> -->
-	</div>
-	<input type="search" name="homeSer" id="homeSer" placeholder="搜索内容...">
+		<div class="homeBg">
+			<img class="homeBgImg" src="images/bg.png" width="200" align="center">
+		</div>
+		<input type="search" name="homeSer" id="homeSer" placeholder="搜索内容...">
 
-	<div class="col-xs-10" >
-		<a class="daohang" id="taoqi" href="#searchRes">陶器</a>
-		<a class="daohang" id="shufa" href="#searchRes">书法</a>
-		<a class="daohang" id="jiagu" href="#searchRes">甲骨</a>
-	</div>
-	<div class="col-xs-2">
-		<a href="#complex-search" data-transition="fade" class="ui-btn ui-btn-inline">高级</a>
-	</div>
-	<div class="col-xs-2">
-		<a href="#searchNav" data-transition="fade" class="ui-btn ui-btn-inline">导航</a>
-	</div>
+		<h4> 
+			<a class="daohang" id="taoqi" href="#searchRes">
+				<span class="label label-info">陶器</span>
+			</a>
+			<a class="daohang" id="shufa" href="#searchRes">
+				<span class="label label-success">书法</span>
+			</a>
+			<a class="daohang" id="jiagu" href="#searchRes">
+				<span class="label label-warning">甲骨</span>
+			</a>
+		</h4>
+
+
+	
 	</div>
 
-	<div data-role="footer" data-position="fixed"></div>
+	<div data-role="footer" style="text-align:center;">
+    	<div data-role="controlgroup" data-type="horizontal">
+      		<a href="#searchNav" class="ui-btn ui-corner-all ui-shadow ui-icon-navigation ui-btn-icon-left" data-transition="fade">搜索导航</a>
+			<a href="#complex-search" class="ui-btn ui-corner-all ui-shadow ui-icon-search ui-btn-icon-left"  data-transition="fade">高级搜索</a>  
+  		</div>
+  	</div>
+
 </div>
 <script src="js/index/home.js"></script>
