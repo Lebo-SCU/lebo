@@ -3,7 +3,6 @@
 	<div data-role="header">
 		<h1>乐博Lebo</h1>
 	</div>
-
 	<div data-role="main" class="ui-content">
 		<div class="homeBg">
 			<img class="homeBgImg" src="images/bg.png" width="200" align="center">

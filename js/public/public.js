@@ -20,7 +20,7 @@ main.doAjax = function(params) {
 				//如果有回调则执行回调
 				if (params.success) {
 
-                    // main.doLighting(response);
+                    response = main.doLighting(response);
 					params.success(response);
 				}
 			}
@@ -68,21 +68,30 @@ main.getTypeDesc = function(type) {
 
 
 main.doLighting =function(response) {
+    console.log(response);
     if (response.highlighting != undefined) {
 
-        console.log(response.highlighting[n]);
+            console.log(response.highlighting[response.response.docs[0].id]);
 
         for (var i = 0; i < response.response.docs.length; i++) {
             if (response.highlighting[response.response.docs[i].id] != undefined){
 
                 if (response.highlighting[response.response.docs[i].id].name != undefined) {
-                    response.response.docs[i].name = response.highlighting[response.response.docs[i].id].name;
+                    response.response.docs[i].name = response.highlighting[response.response.docs[i].id].name[0];
                 }
+                if (response.highlighting[response.response.docs[i].id].location != undefined) {
+                    response.response.docs[i].location = response.highlighting[response.response.docs[i].id].location[0];
+                }
+                if (response.highlighting[response.response.docs[i].id].museum_name != undefined) {
+                    response.response.docs[i].museum_name = response.highlighting[response.response.docs[i].id].museum_name[0];
+                }
+
             }
 
         }
     }
 
+    return response;
 }
 
 
@@ -94,23 +103,23 @@ main.doSea = function(searchResData) {
         var searchTag = "首页>搜索";
         var urlList = "http://120.76.144.46:8080/solr/lebojson/select?indent=on&wt=json";
         
-        if(searchResData.qes != undefined){
+        if(searchResData.qes != undefined ){
             searchTag = searchTag + '>' + searchResData.qes;
-            urlList = urlList + "&q=" + searchResData.qes;
+            urlList = urlList + "&q=" + searchResData.qes + '&hl.fl=museum_name,name,&hl.simple.post=</font>&hl.simple.pre=<font%20color="red">&hl=on';
 
         }else{
 
             if(searchResData.loc != undefined){
                 searchTag = searchTag + '>行政区划：' + searchResData.loc;
-                urlList = urlList + "&q=location:" + searchResData.loc;
+                urlList = urlList + "&q=location:" + searchResData.loc + '&hl.fl=location&hl.simple.post=</font>&hl.simple.pre=<font%20color="red">&hl=on';
             }
             if(searchResData.relName != undefined){
                 searchTag = searchTag + '>文物名：' + searchResData.relName;
-                urlList = urlList + "&q=name:" + searchResData.relName;
+                urlList = urlList + "&q=name:" + searchResData.relName + '&hl.fl=name&hl.simple.post=</font>&hl.simple.pre=<font%20color="red">&hl=on';
             }
             if(searchResData.musName != undefined){
                 searchTag = searchTag + '>博物馆名：' + searchResData.musName;
-                urlList = urlList + "&q=museum_name:" + searchResData.musName;
+                urlList = urlList + "&q=museum_name:" + searchResData.musName + '&hl.fl=museum_name&hl.simple.post=</font>&hl.simple.pre=<font%20color="red">&hl=on';
             }
             if (searchResData.loc == undefined && searchResData.relName == undefined && searchResData.musName == undefined ) {
                 urlList = urlList + "&q=*:*";

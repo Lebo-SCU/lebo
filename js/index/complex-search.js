@@ -18,6 +18,7 @@ $(document).on("pageshow","#complex-search",function(){ // 当进入页面二时
 			case "2":
 				if (searchResData.qes != "") {
 					searchResData.musName = searchResData.qes;
+					searchResData.qes = null;
 					break;
 				};
 			break;
@@ -25,6 +26,7 @@ $(document).on("pageshow","#complex-search",function(){ // 当进入页面二时
 			case "3":
 				if (searchResData.qes != "") {
 					searchResData.loc = searchResData.qes;
+					searchResData.qes = null;
 					break;
 				};
 			break;
@@ -51,6 +53,10 @@ $(document).on("pageshow","#complex-search",function(){ // 当进入页面二时
 	    	if(obj[i].checked)  mater.push(obj[i].value);  
 	  	} 
 		searchResData.mater = mater;
+
+		if (searchResData.qes == "") {
+			searchResData.qes = null;
+		}
 		transData = searchResData;
 		console.log(searchResData);
 	});
