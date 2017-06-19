@@ -34,7 +34,11 @@
         </ul>
 
     </div>
-    <div data-role="footer" data-position="fixed"></div>
+    <div data-role="footer" data-position="fixed">
+        <button class="last_page">上一页</button>
+        <p class="text-center" id="total_page"></p>
+        <button class="next_page">下一页</button>
+    </div>
 
 </div>
 

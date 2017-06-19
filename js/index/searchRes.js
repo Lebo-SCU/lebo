@@ -37,7 +37,7 @@ $(document).on("pageshow","#searchRes",function(){
 
             url:mainData.urlList,
             success:function(ret) { 
-
+                    console.log(ret);
                 ret.response.docs.forEach(function (res) {
                     
                     var $item = $template.clone(true);
@@ -63,10 +63,86 @@ $(document).on("pageshow","#searchRes",function(){
         }); 
 
 
+    //下一页跳转
+    $('.next_page').bind('click', function() {
+        $("li").remove();
+        if (transData.start) {
+            transData.start += 1;
+        } else {
+            transData.start = 2;
+        }
 
-    $('button').bind('click', function() {
-        $.mobile.changePage("#complex-search", "slideup");
-        console.log(transData);
+        var mainData = main.doSea(transData);
+        main.doAjax({
+
+            url:mainData.urlList,
+            success:function(ret) { 
+                $("#total_page").text(ret.response.start+"/"+ret.response.numFound/10+"页");    
+
+                ret.response.docs.forEach(function (res) {
+                    
+                    var $item = $template.clone(true);
+                    var myimg = "http://kydww.sach.gov.cn" + res.img[0];
+                    $item.find('.myimg').attr('src', myimg);
+                    $item.find('.relName').text(res.name);
+                    $item.find('.dyn').text(res.productionDynasty);
+                    $item.find('.level').text(main.getTypeDesc(res.level));
+                    $item.find('.musName').text(res.museum_name);
+                    $items.append($item);
+                    $item.bind("click", function(){
+                        transData = {};
+                        transData = res;
+                        $.mobile.changePage("#searchDetails"); 
+
+                    });
+
+
+                });
+                
+
+            }
+        }); 
+
+    });
+
+    //上一页跳转
+    $('.last_page').bind('click', function() {
+        if (transData.start) {
+            if (transData.start > 1) {
+                $("li").remove();
+                transData.start -= 1;
+                var mainData = main.doSea(transData);
+                main.doAjax({
+
+                    url:mainData.urlList,
+                    success:function(ret) { 
+
+                        ret.response.docs.forEach(function (res) {
+                            
+                            var $item = $template.clone(true);
+                            var myimg = "http://kydww.sach.gov.cn" + res.img[0];
+                            $item.find('.myimg').attr('src', myimg);
+                            $item.find('.relName').text(res.name);
+                            $item.find('.dyn').text(res.productionDynasty);
+                            $item.find('.level').text(main.getTypeDesc(res.level));
+                            $item.find('.musName').text(res.museum_name);
+                            $items.append($item);
+                            $item.bind("click", function(){
+                                transData = {};
+                                transData = res;
+                                $.mobile.changePage("#searchDetails"); 
+
+                            });
+
+
+                        });
+                        
+
+                    }
+                }); 
+            }
+        } 
+
     });
 });
 
