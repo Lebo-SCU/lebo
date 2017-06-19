@@ -18,6 +18,9 @@
 	<div class="col-xs-2">
 		<a href="#complex-search" data-transition="fade" class="ui-btn ui-btn-inline">高级</a>
 	</div>
+	<div class="col-xs-2">
+		<a href="#searchNav" data-transition="fade" class="ui-btn ui-btn-inline">导航</a>
+	</div>
 	</div>
 	<!-- <a href="#searchDetails" data-transition="fade" class="ui-btn ui-btn-inline">搜索</a> -->
 	<div data-role="footer" data-position="fixed"></div>

@@ -9,7 +9,7 @@ include "view/index/complex-search.php";
 include "view/index/normal-search.php";
 include "view/index/searchRes.php";
 include "view/index/searchDetails.php";
-
+include "view/index/searchNav.php";
 ?>
 
 
