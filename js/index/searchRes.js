@@ -24,7 +24,7 @@ $(document).on("pageinit","#searchRes",function(){
 
 $(document).on("pagebeforeshow","#searchRes",function(){ 
     $("li").remove();
-    
+    transData.start = 1;
 });
 
 
@@ -33,12 +33,13 @@ $(document).on("pageshow","#searchRes",function(){
         var mainData = main.doSea(transData);
         // $(document).find('.all-item').remove();
         $(document).find('.searchTag').text(mainData.searchTag);
-      
         main.doAjax({
 
             url:mainData.urlList,
             success:function(ret) { 
                     console.log(ret);
+                $("#total_page").text(ret.response.start+"/"+parseInt(ret.response.numFound/10)+"页");    
+
                 ret.response.docs.forEach(function (res) {
                     
                     var $item = $template.clone(true);
