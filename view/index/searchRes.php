@@ -13,7 +13,7 @@
         <ul class="all-items"  data-role="listview"  data-inset="true">
                 <li class="all-item list-group-item" >
                     <img class="myimg" src="images/wrong.jpeg" width="280" onerror="main.avatar_error()" />
-                    <div class="relName"></div>
+                    <div class="relName" style="text-overflow:ellipsis;"></div>
                     <div class="container">
                         <div class="row">
                             <div class="details">

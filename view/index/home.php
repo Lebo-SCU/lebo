@@ -36,7 +36,7 @@
 		<ul class="home-items"  data-role="listview"  data-inset="true">
             <li class="home-item list-group-item" >
                 <img class="homeMyimg" src="images/wrong.jpeg" width="280" onerror="main.avatar_error()" />
-                <div class="homeRelName"></div>
+                <div class="homeRelName" ></div>
                 <div class="container">
                     <div class="row">
                         <div class="details">

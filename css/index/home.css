@@ -1,3 +1,7 @@
+#home .ui-content {
+	overflow:ellipsis; 
+}
+
 #home .ui-content .homeBg{
 	margin: auto;
 	width: 200px;
