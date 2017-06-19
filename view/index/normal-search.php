@@ -6,7 +6,7 @@
 
 	<div data-role="main" class="ui-content">
 	<p>欢迎! 点击以下链接跳转到高级搜索页面。 </p>
-	<input type="search" name="search" id="search" placeholder="搜索内容...">
+	<input type="text" name="norSer" id="norSer" placeholder="搜索内容...">
 	<div class="col-xs-10" >
 
 	</div>

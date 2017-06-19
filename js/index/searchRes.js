@@ -9,15 +9,15 @@
     // searchResData.mater = "瓷";
     // searchResData.typ = "瓷器";
     // searchResData.sort = "级别从高到低";
-var $template = $(document).find('.all-item');
-var $items = $(document).find('.all-items');
+var $template = $(document).find('#searchRes .all-item');
+var $items = $(document).find('#searchRes .all-items');
 
 
 
 
 
 $(document).on("pageinit","#searchRes",function(){
-    //var mainData = main.doSea(transData);
+    var mainData = main.doSea(transData);
     
 });
 
@@ -50,8 +50,8 @@ $(document).on("pageshow","#searchRes",function(){
                     $item.find('.musName').text(res.museum_name);
                     $items.append($item);
                     $item.bind("click", function(){
-                        transData = {};
-                        transData = res;
+                        //transData = {};
+                        searchDet = res;
                         $.mobile.changePage("#searchDetails"); 
 
                     });
@@ -91,8 +91,8 @@ $(document).on("pageshow","#searchRes",function(){
                     $item.find('.musName').text(res.museum_name);
                     $items.append($item);
                     $item.bind("click", function(){
-                        transData = {};
-                        transData = res;
+                        //transData = {};
+                        searchDet = res;
                         $.mobile.changePage("#searchDetails"); 
 
                     });
@@ -130,8 +130,8 @@ $(document).on("pageshow","#searchRes",function(){
                             $item.find('.musName').text(res.museum_name);
                             $items.append($item);
                             $item.bind("click", function(){
-                                transData = {};
-                                transData = res;
+                                //transData = {};
+                                searchDet = res;
                                 $.mobile.changePage("#searchDetails"); 
 
                             });

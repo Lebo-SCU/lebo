@@ -49,5 +49,6 @@
 
 
     </div>
+</div>
 
 <script src="js/index/searchRes.js"></script>

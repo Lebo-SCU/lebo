@@ -16,5 +16,26 @@ $(document).on("pageshow","#searchNav",function(){
     	   transData.labTy="propertyType";
         });    
     });
+    $('.navDyn').each(function(){
+        $(this).bind('click', function() {
+           transData = {};
+           transData.lab = $(this).text();
+           transData.labTy="productionDynasty";
+        });    
+    });
+    $('.navLoc').each(function(){
+        $(this).bind('click', function() {
+           transData = {};
+           transData.lab = $(this).text();
+           transData.labTy="location";
+        });    
+    });
+    $('.navMater').each(function(){
+        $(this).bind('click', function() {
+           transData = {};
+           transData.lab = $(this).text();
+           transData.labTy="materials";
+        });    
+    });
 
 });

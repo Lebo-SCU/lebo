@@ -54,52 +54,75 @@
 
     <p>按年代划分:</p>
     <div class="ui-grid-a">
-      <div class="ui-block-a"><a class="navDyn" href="#searchRes">夏(约前2070~前1600)</a></div>
-      <div class="ui-block-b"><a class="navDyn" href="#searchRes">商(前1600~前1046)</a></div>
+      <div class="ui-block-a"><a class="navDyn" href="#searchRes">夏</a>(约前2070~前1600)</div>
+      <div class="ui-block-b"><a class="navDyn" href="#searchRes">商</a>(前1600~前1046)</div>
       <div class="ui-block-a"><a class="navDyn" href="#searchRes">周</a></div>
-      <div class="ui-block-b"><a class="navDyn" href="#searchRes">秦(前221~前206)</a></div>
+      <div class="ui-block-b"><a class="navDyn" href="#searchRes">秦</a>(前221~前206)</div>
       <div class="ui-block-a"><a class="navDyn" href="#searchRes">汉</a></div>
       <div class="ui-block-b"><a class="navDyn" href="#searchRes">三国</a></div>
-      <div class="ui-block-a"><a class="navDyn" href="#searchRes">西晋(265~317)</a></div>
+      <div class="ui-block-a"><a class="navDyn" href="#searchRes">西晋</a>(265~317)</div>
       <div class="ui-block-b"><a class="navDyn" href="#searchRes">东晋十六国</a></div>
       <div class="ui-block-a"><a class="navDyn" href="#searchRes">南北朝</a></div>
-      <div class="ui-block-b"><a class="navDyn" href="#searchRes">隋(581~618)</a></div>
-      <div class="ui-block-a"><a class="navDyn" href="#searchRes">唐(618~907)</a></div>
+      <div class="ui-block-b"><a class="navDyn" href="#searchRes">隋</a>(581~618)</div>
+      <div class="ui-block-a"><a class="navDyn" href="#searchRes">唐</a>(618~907)</div>
       <div class="ui-block-b"><a class="navDyn" href="#searchRes">五代十国</a></div>
       <div class="ui-block-a"><a class="navDyn" href="#searchRes">宋</a></div>
-      <div class="ui-block-b"><a class="navDyn" href="#searchRes">辽(907~1125)</a></div>
-      <div class="ui-block-a"><a class="navDyn" href="#searchRes">西夏(1038~1227)</a></div>
-      <div class="ui-block-b"><a class="navDyn" href="#searchRes">金(1115~1234)</a></div>
-      <div class="ui-block-b"><a class="navDyn" href="#searchRes">元(1206~1368)</a></div>
-      <div class="ui-block-a"><a class="navDyn" href="#searchRes">明(1368~1644)</a></div>
-      <div class="ui-block-b"><a class="navDyn" href="#searchRes">清(1616~1911)</a></div>
+      <div class="ui-block-b"><a class="navDyn" href="#searchRes">辽</a>(907~1125)</div>
+      <div class="ui-block-a"><a class="navDyn" href="#searchRes">西夏</a>(1038~1227)</div>
+      <div class="ui-block-b"><a class="navDyn" href="#searchRes">金</a>(1115~1234)</div>
+      <div class="ui-block-b"><a class="navDyn" href="#searchRes">元</a>(1206~1368)</div>
+      <div class="ui-block-a"><a class="navDyn" href="#searchRes">明</a>(1368~1644)</div>
+      <div class="ui-block-b"><a class="navDyn" href="#searchRes">清</a>(1616~1911)</div>
       <div class="ui-block-a"><a class="navDyn" href="#searchRes">中华民国</a></div>
-      <div class="ui-block-b"><a class="navDyn" href="#searchRes">中华人民共和国(1949年10月1日成立)</a></div>
+      <div class="ui-block-b"><a class="navDyn" href="#searchRes">中华人民共和国</a>(1949年10月1日成立)</div>
     </div>
 
     <p>按地点划分:</p>
     <div class="ui-grid-b">
-      <div class="ui-block-a"><a class="navLoc" href="#searchRes">夏(约前2070~前1600)</a></div>
-      <div class="ui-block-b"><a class="navLoc" href="#searchRes">商(前1600~前1046)</a></div>
-      <div class="ui-block-c"><a class="navLoc" href="#searchRes">周</a></div>
-      <div class="ui-block-a"><a class="navLoc" href="#searchRes">秦(前221~前206)</a></div>
-      <div class="ui-block-b"><a class="navLoc" href="#searchRes">汉</a></div>
-      <div class="ui-block-c"><a class="navLoc" href="#searchRes">三国</a></div>
-      <div class="ui-block-a"><a class="navLoc" href="#searchRes">西晋(265~317)</a></div>
-      <div class="ui-block-b"><a class="navLoc" href="#searchRes">东晋十六国</a></div>
-      <div class="ui-block-c"><a class="navLoc" href="#searchRes">南北朝</a></div>
-      <div class="ui-block-a"><a class="navLoc" href="#searchRes">隋(581~618)</a></div>
-      <div class="ui-block-b"><a class="navLoc" href="#searchRes">唐(618~907)</a></div>
-      <div class="ui-block-c"><a class="navLoc" href="#searchRes">五代十国</a></div>
-      <div class="ui-block-a"><a class="navLoc" href="#searchRes">宋</a></div>
-      <div class="ui-block-b"><a class="navLoc" href="#searchRes">辽(907~1125)</a></div>
-      <div class="ui-block-c"><a class="navLoc" href="#searchRes">西夏(1038~1227)</a></div>
-      <div class="ui-block-a"><a class="navLoc" href="#searchRes">金(1115~1234)</a></div>
-      <div class="ui-block-b"><a class="navLoc" href="#searchRes">元(1206~1368)</a></div>
-      <div class="ui-block-c"><a class="navLoc" href="#searchRes">明(1368~1644)</a></div>
-      <div class="ui-block-a"><a class="navLoc" href="#searchRes">清(1616~1911)</a></div>
-      <div class="ui-block-b"><a class="navLoc" href="#searchRes">中华民国</a></div>
-      <div class="ui-block-c"><a class="navLoc" href="#searchRes">中华人民共和国(1949年10月1日成立)</a></div>
+      <div class="ui-block-a"><a class="navLoc" href="#searchRes">北京市</a></div>
+      <div class="ui-block-b"><a class="navLoc" href="#searchRes">天津市</a></div>
+      <div class="ui-block-c"><a class="navLoc" href="#searchRes">上海市</a></div>
+      <div class="ui-block-a"><a class="navLoc" href="#searchRes">重庆市</a></div>
+      <div class="ui-block-b"><a class="navLoc" href="#searchRes">河北省</a></div>
+      <div class="ui-block-c"><a class="navLoc" href="#searchRes">山西省</a></div>
+      <div class="ui-block-a"><a class="navLoc" href="#searchRes">辽宁省</a></div>
+      <div class="ui-block-b"><a class="navLoc" href="#searchRes">吉林省</a></div>
+      <div class="ui-block-c"><a class="navLoc" href="#searchRes">黑龙江省</a></div>
+      <div class="ui-block-a"><a class="navLoc" href="#searchRes">江苏省</a></div>
+      <div class="ui-block-b"><a class="navLoc" href="#searchRes">浙江省</a></div>
+      <div class="ui-block-c"><a class="navLoc" href="#searchRes">安徽省</a></div>
+      <div class="ui-block-a"><a class="navLoc" href="#searchRes">福建省</a></div>
+      <div class="ui-block-b"><a class="navLoc" href="#searchRes">台湾省</a></div>
+      <div class="ui-block-c"><a class="navLoc" href="#searchRes">江西省</a></div>
+      <div class="ui-block-a"><a class="navLoc" href="#searchRes">山东省</a></div>
+      <div class="ui-block-b"><a class="navLoc" href="#searchRes">河南省</a></div>
+      <div class="ui-block-c"><a class="navLoc" href="#searchRes">湖北省</a></div>
+      <div class="ui-block-a"><a class="navLoc" href="#searchRes">湖南省</a></div>
+      <div class="ui-block-b"><a class="navLoc" href="#searchRes">广东省</a></div>
+      <div class="ui-block-c"><a class="navLoc" href="#searchRes">海南省</a></div>
+      <div class="ui-block-c"><a class="navLoc" href="#searchRes">四川省</a></div>
+      <div class="ui-block-c"><a class="navLoc" href="#searchRes">贵州省</a></div>
+      <div class="ui-block-c"><a class="navLoc" href="#searchRes">云南省</a></div>
+      <div class="ui-block-c"><a class="navLoc" href="#searchRes">陕西省</a></div>
+      <div class="ui-block-c"><a class="navLoc" href="#searchRes">甘肃省</a></div>
+      <div class="ui-block-c"><a class="navLoc" href="#searchRes">青海省</a></div>
+      <div class="ui-block-c"><a class="navLoc" href="#searchRes">内蒙古自治区</a></div>
+      <div class="ui-block-c"><a class="navLoc" href="#searchRes">广西壮族自治区</a></div>
+      <div class="ui-block-c"><a class="navLoc" href="#searchRes">西藏自治区</a></div>
+      <div class="ui-block-c"><a class="navLoc" href="#searchRes">宁夏回族自治区</a></div>
+      <div class="ui-block-c"><a class="navLoc" href="#searchRes">新疆维吾尔自治区</a></div>
+    </div>
+
+    <p>按质地划分:</p>
+    <div class="ui-grid-b">
+      <div class="ui-block-c"><a class="navMater" href="#searchRes">金</a></div>
+      <div class="ui-block-c"><a class="navMater" href="#searchRes">银</a></div>
+      <div class="ui-block-c"><a class="navMater" href="#searchRes">铜</a></div>
+      <div class="ui-block-c"><a class="navMater" href="#searchRes">铁</a></div>
+      <div class="ui-block-c"><a class="navMater" href="#searchRes">木</a></div>
+      <div class="ui-block-c"><a class="navMater" href="#searchRes">纸</a></div>
+      <div class="ui-block-c"><a class="navMater" href="#searchRes">棉麻</a></div>
+      <div class="ui-block-c"><a class="navMater" href="#searchRes">瓷</a></div>
     </div>
 
 

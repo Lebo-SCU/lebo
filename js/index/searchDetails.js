@@ -1,24 +1,24 @@
 ﻿$(document).on("pageshow","#searchDetails",function(){ // 当进入页面二时
 
-	console.log(transData);
-	var myimg = "http://kydww.sach.gov.cn" + transData.img[0];
+	console.log(searchDet);
+	var myimg = "http://kydww.sach.gov.cn" + searchDet.img[0];
 	$('.pa-avatar').attr('src', myimg);
-	$('.sd_relName').text(transData.name);
-	$('.sd_level').text(main.getTypeDesc(transData.level));
-	$('.sd_dyn').text(transData.productionDynasty);
-	if (transData.measurement_volumne != null) {
-		$('.sd_vol').text(transData.measurement_volumne[0]);
+	$('.sd_relName').text(searchDet.name);
+	$('.sd_level').text(main.getTypeDesc(searchDet.level));
+	$('.sd_dyn').text(searchDet.productionDynasty);
+	if (searchDet.measurement_volumne != null) {
+		$('.sd_vol').text(searchDet.measurement_volumne[0]);
 	}
-	if (transData.measurement_size != null) {
-		$('.sd_size').text(transData.measurement_size[0]);
+	if (searchDet.measurement_size != null) {
+		$('.sd_size').text(searchDet.measurement_size[0]);
 	}
-	if (transData.materials != null) {
-		$('.sd_mater').text(transData.materials);
+	if (searchDet.materials != null) {
+		$('.sd_mater').text(searchDet.materials);
 	}
-	$('.sd_typ').text(transData.propertyType);
-	$('.sd_musName').text(transData.museum_name);
-	$('.sd_musNum').text(transData.number_museum[0]);
-	$('.sd_loc').text(transData.location);
-	$('.sd_sysNum').text(transData.number_system[0]);
+	$('.sd_typ').text(searchDet.propertyType);
+	$('.sd_musName').text(searchDet.museum_name);
+	$('.sd_musNum').text(searchDet.number_museum[0]);
+	$('.sd_loc').text(searchDet.location);
+	$('.sd_sysNum').text(searchDet.number_system[0]);
 
 });
