@@ -33,16 +33,16 @@
 		</h4>
 
 
-		<ul class="all-items"  data-role="listview"  data-inset="true">
-            <li class="all-item list-group-item" >
-                <img class="myimg" src="images/wrong.jpeg" width="280" onerror="main.avatar_error()" />
-                <div class="relName"></div>
+		<ul class="home-items"  data-role="listview"  data-inset="true">
+            <li class="home-item list-group-item" >
+                <img class="homeMyimg" src="images/wrong.jpeg" width="280" onerror="main.avatar_error()" />
+                <div class="homeRelName"></div>
                 <div class="container">
                     <div class="row">
                         <div class="details">
-                            <div class="dyn col-xs-10"></div>
-                            <div class="level col-xs-2"></div>
-                            <div class="musName col-xs-12" ></div>
+                            <div class="home-dyn col-xs-10"></div>
+                            <div class="home-level col-xs-2"></div>
+                            <div class="home-musName col-xs-12" ></div>
                         </div>
                     </div>
                 </div>
@@ -50,8 +50,8 @@
         </ul>
 
 
-	
 	</div>
+
 
 	<div data-role="footer" style="text-align:center;" data-position="fixed">
     	<div data-role="controlgroup" data-type="horizontal">
