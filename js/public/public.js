@@ -2,6 +2,7 @@ var main = {};
 var searchResData={};
 var transData ={};
 var searchDet = {};
+var nor = {};
 main.clickme =function(){
 	alert("hey");
 }
@@ -169,3 +170,4 @@ main.doSea = function(searchResData) {
         return data;
         
     }
+
