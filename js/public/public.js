@@ -19,6 +19,8 @@ main.doAjax = function(params) {
 			if (response.responseHeader) {
 				//如果有回调则执行回调
 				if (params.success) {
+
+                    main.doLighting(response);
 					params.success(response);
 				}
 			}
@@ -65,6 +67,28 @@ main.getTypeDesc = function(type) {
 }
 
 
+main.doLighting =function(response) {
+    if (response.highlighting != undefined) {
+        
+        console.log(response.highlighting[n]);
+
+        for (var i = 0; i < response.response.docs.length; i++) {
+
+            if (response.highlighting.(response.response.docs[i].id) != undefined){
+
+                if (response.highlighting.(response.response.docs[i].id).name != undefined) {
+                    response.response.docs[i].name = response.highlighting.(response.response.docs[i].id).name;
+                }
+            }
+
+        }
+    }
+
+}
+
+
+
+
 main.doSea = function(searchResData) {
         var data = {};
         console.log(searchResData);
@@ -74,6 +98,7 @@ main.doSea = function(searchResData) {
         if(searchResData.qes != undefined){
             searchTag = searchTag + '>' + searchResData.qes;
             urlList = urlList + "&q=" + searchResData.qes;
+
         }else{
             urlList = urlList + "&q=*:*";
         }
