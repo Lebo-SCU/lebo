@@ -2,7 +2,7 @@
 
 <div data-role="page" id="searchRes">
 
-    <div data-role="header" data-position="fixed">
+    <div data-role="header" data-position="inline">
         <a href="" data-role="button" data-rel="back">返回</a>
         <h1>乐博</h1>
     </div>
@@ -34,12 +34,20 @@
         </ul>
 
     </div>
-    <div data-role="footer" data-position="fixed">
-        <button class="last_page">上一页</button>
-        <p class="text-center" id="total_page"></p>
-        <button class="next_page">下一页</button>
-    </div>
 
-</div>
+    <div class="col-xs-4">
+        <a data-role="button" class="last_page">上一页</a>
+    </div>
+    <div class="col-xs-4">
+        <h4 class="text-center" id="total_page"></h4>
+    </div>
+    
+    <div class="col-xs-4">
+        <a data-role="button" class="next_page">下一页</a>
+    </div>      
+    <div data-role="footer" data-position="inline">
+
+
+    </div>
 
 <script src="js/index/searchRes.js"></script>

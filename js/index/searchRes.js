@@ -78,7 +78,7 @@ $(document).on("pageshow","#searchRes",function(){
 
             url:mainData.urlList,
             success:function(ret) { 
-                $("#total_page").text(ret.response.start+"/"+ret.response.numFound/10+"页");    
+                $("#total_page").text(ret.response.start+"/"+parseInt(ret.response.numFound/10)+"页");    
 
                 ret.response.docs.forEach(function (res) {
                     
@@ -117,6 +117,7 @@ $(document).on("pageshow","#searchRes",function(){
 
                     url:mainData.urlList,
                     success:function(ret) { 
+                        $("#total_page").text(ret.response.start+"/"+parseInt(ret.response.numFound/10)+"页");    
 
                         ret.response.docs.forEach(function (res) {
                             
