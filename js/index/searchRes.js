@@ -39,7 +39,13 @@ $(document).on("pageshow","#searchRes",function(){
                     $item.find('.level').text(main.getTypeDesc(res.level));
                     $item.find('.musName').text(res.museum_name);
                     $items.append($item);
-                    /*$item.bind('click')*/
+                    $item.bind("click", function(){
+                        //这里需要一个页面跳转的方法
+                        // $(document).on("pagebeforeshow", "#searchDetails", function(){
+                        //     searchDet = res;
+                        // });
+                    });
+
 
                 });
                 
