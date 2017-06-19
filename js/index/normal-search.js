@@ -29,8 +29,13 @@
             xmlhttp.onreadystatechange=function()
             {
                 if (xmlhttp.readyState==4 && xmlhttp.status==200)
-                {
+                {	
+
+
+                	console.log(xmlhttp);
                 	//这里是xml取的值
+                	var namee = xmlhttp.response.match('<str name="name">(.*?)</str>');
+                	console.log(namee);
                     // xmlhttp.response.name.foreach(function(res){
                     //     document.getElementById("livesearch").innerHTML=res;
                     //     document.getElementById("livesearch").style.border="1px solid #A5ACB2";
