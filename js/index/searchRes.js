@@ -9,17 +9,20 @@
     // searchResData.mater = "瓷";
     // searchResData.typ = "瓷器";
     // searchResData.sort = "级别从高到低";
+var $template = $(document).find('.all-item');
+var $items = $(document).find('.all-items');
+
+$(document).on("pagebeforeshow","#searchRes",function(){ // 当进入页面二时
+                    $("li").remove();
+        });
+
 
 $(document).on("pageshow","#searchRes",function(){
 
         var mainData = main.doSea(transData);
-        
         $(document).find('.searchTag').text(mainData.searchTag);
 
-        var $template = $(document).find('.all-item');
-        var $items = $(document).find('.all-items');
-
-        $(document).find('.all-item').remove();
+        // $(document).find('.all-item').remove();
 
         main.doAjax({
 
