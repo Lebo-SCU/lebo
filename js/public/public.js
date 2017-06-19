@@ -1,6 +1,7 @@
 var main = {};
 var searchResData={};
 var transData ={};
+var searchDet = {};
 main.clickme =function(){
 	alert("hey");
 }
@@ -95,8 +96,8 @@ main.doSea = function(searchResData) {
             searchTag = searchTag + '>' + searchResData.musName;
             urlList = urlList + "&fq=museum_name:" + searchResData.musName;
         }
-        if(searchResData.dyn[0] != undefined){
-            searchResData.dyn.foreach(function(dyn){
+        if(searchResData.dyn != undefined){
+            searchResData.dyn.forEach(function(dyn){
                 searchTag = searchTag + '>' + dyn;
                 urlList = urlList + "&fq=productionDynasty:" + dyn;
             });
@@ -105,15 +106,15 @@ main.doSea = function(searchResData) {
             searchTag = searchTag + '>' + searchResData.level;
             urlList = urlList + "&fq=level:" + searchResData.level;
         }
-        if(searchResData.mater[0] != undefined){
-            searchResData.mater.foreach(function(mater){
+        if(searchResData.mater != undefined){
+            searchResData.mater.forEach(function(mater){
                 searchTag = searchTag + '>' + mater;
                 urlList = urlList + "&fq=materials:" + mater;
             });
             
         }
         // if(searchResData.typ[0] != undefined){
-        //     searchResData.typ.foreach(function(typ){
+        //     searchResData.typ.forEach(function(typ){
         //         searchTag = searchTag + '>' + typ;
         //         urlList = urlList + "&fq=propertyType:" + typ;
         //     });

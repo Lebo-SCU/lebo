@@ -8,17 +8,17 @@ $(document).on("pageshow","#complex-search",function(){ // 当进入页面二时
 		$('input:radio[name="search_content"]:checked').val()
 		switch($('input:radio[name="search_content"]:checked').val()){
 			case "1":
-				if (searchResData.qes == "") {searchResData.qes="*"};
+				if (searchResData.qes == "") {searchResData.qes="*:*"};
 				searchResData.qes = "name:"+searchResData.qes;
 			break;
 
 			case "2":
-				if (searchResData.qes == "") {searchResData.qes="*"};
+				if (searchResData.qes == "") {searchResData.qes="*:*"};
 				searchResData.qes = "museum_name:"+searchResData.qes;
 			break;
 
 			case "3":
-				if (searchResData.qes == "") {searchResData.qes="*"};
+				if (searchResData.qes == "") {searchResData.qes="*:*"};
 				searchResData.qes = "location:"+searchResData.qes;
 			break;
 

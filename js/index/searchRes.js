@@ -39,6 +39,7 @@ $(document).on("pageshow","#searchRes",function(){
                     $item.find('.level').text(main.getTypeDesc(res.level));
                     $item.find('.musName').text(res.museum_name);
                     $items.append($item);
+                    /*$item.bind('click')*/
 
                 });
                 
