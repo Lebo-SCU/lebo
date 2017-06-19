@@ -20,8 +20,6 @@
 	</div>
 	</div>
 	<!-- <a href="#searchDetails" data-transition="fade" class="ui-btn ui-btn-inline">搜索</a> -->
-	<div data-role="footer">
-		<h1>底部文本</h1>
-	</div>
+	<div data-role="footer" data-position="fixed"></div>
 </div>
 <script src="js/index/home.js"></script>

@@ -2,19 +2,19 @@
 
 <div data-role="page" id="searchRes">
 
-    <div data-role="header">
+    <div data-role="header" data-position="fixed">
         <a href="" data-role="button" data-rel="back">返回</a>
         <h1>乐博</h1>
     </div>
 
     <div data-role="main" class="ui-content">
-            <table class="table table-striped">
-                <tbody>
-                    <tr>
-                        <td class="searchTag"></td>
-                    </tr>
-                </tbody>
-            </table>
+        <table class="table table-striped">
+            <tbody>
+                <tr>
+                    <td class="searchTag"></td>
+                </tr>
+            </tbody>
+        </table>
 
         <ul class="all-items"  data-role="listview" >
 
@@ -34,6 +34,7 @@
         </ul>
 
     </div>
+    <div data-role="footer" data-position="fixed"></div>
 
 </div>
 

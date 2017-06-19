@@ -12,6 +12,16 @@
 var $template = $(document).find('.all-item');
 var $items = $(document).find('.all-items');
 
+
+
+
+
+$(document).on("pageinit","#searchRes",function(){
+        var mainData = main.doSea(transData);
+        $(document).find('.searchTag').text(mainData.searchTag);
+});
+
+
 $(document).on("pagebeforeshow","#searchRes",function(){ // 当进入页面二时
                     $("li").remove();
         });
@@ -20,7 +30,6 @@ $(document).on("pagebeforeshow","#searchRes",function(){ // 当进入页面二�
 $(document).on("pageshow","#searchRes",function(){
 
         var mainData = main.doSea(transData);
-        $(document).find('.searchTag').text(mainData.searchTag);
 
         // $(document).find('.all-item').remove();
 
