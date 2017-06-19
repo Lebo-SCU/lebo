@@ -95,7 +95,24 @@ main.doLighting =function(response) {
     return response;
 }
 
+main.doRadom =function() {
 
+
+        var random = parseInt(Math.random()*100000%13404);
+        main.doAjax({
+        
+            url:"http://120.76.144.46:8080/solr/lebojson/select?indent=on&wt=json&q=*:*&start="+random,
+
+            success:function(ret) { 
+            // response[i] = ret.response.docs[i];
+                console.log(ret.response.docs[0]);
+                return ret.response.docs[0];
+            }
+        }); 
+
+
+
+}
 
 
 main.doSea = function(searchResData) {
@@ -170,4 +187,6 @@ main.doSea = function(searchResData) {
         return data;
         
     }
+
+
 
