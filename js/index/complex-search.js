@@ -4,26 +4,27 @@ $(document).on("pageshow","#complex-search",function(){ // 当进入页面二时
 	$(".submit").bind("click",function(){
 	    searchResData = {};
 
-		searchResData.data = $('#search').val();
+		searchResData.qes = $('#search').val();
 		$(document).find('input:radio[name="search_content"]:checked').val();
 		switch($(document).find('input:radio[name="search_content"]:checked').val()){
 			case "1":
-				if (searchResData.data != "") {
-					searchResData.relName = searchResData.data;
+				if (searchResData.qes != "") {
+					searchResData.relName = searchResData.qes;
+					searchResData.qes = null;
 					break;
 				};
 			break;
 
 			case "2":
-				if (searchResData.data != "") {
-					searchResData.musName = searchResData.data;
+				if (searchResData.qes != "") {
+					searchResData.musName = searchResData.qes;
 					break;
 				};
 			break;
 
 			case "3":
-				if (searchResData.data != "") {
-					searchResData.loc = searchResData.data;
+				if (searchResData.qes != "") {
+					searchResData.loc = searchResData.qes;
 					break;
 				};
 			break;

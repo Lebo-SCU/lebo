@@ -20,7 +20,7 @@ main.doAjax = function(params) {
 				//如果有回调则执行回调
 				if (params.success) {
 
-                    main.doLighting(response);
+                    // main.doLighting(response);
 					params.success(response);
 				}
 			}
@@ -69,15 +69,14 @@ main.getTypeDesc = function(type) {
 
 main.doLighting =function(response) {
     if (response.highlighting != undefined) {
-        
+
         console.log(response.highlighting[n]);
 
         for (var i = 0; i < response.response.docs.length; i++) {
+            if (response.highlighting[response.response.docs[i].id] != undefined){
 
-            if (response.highlighting.(response.response.docs[i].id) != undefined){
-
-                if (response.highlighting.(response.response.docs[i].id).name != undefined) {
-                    response.response.docs[i].name = response.highlighting.(response.response.docs[i].id).name;
+                if (response.highlighting[response.response.docs[i].id].name != undefined) {
+                    response.response.docs[i].name = response.highlighting[response.response.docs[i].id].name;
                 }
             }
 
@@ -100,24 +99,29 @@ main.doSea = function(searchResData) {
             urlList = urlList + "&q=" + searchResData.qes;
 
         }else{
-            urlList = urlList + "&q=*:*";
+
+            if(searchResData.loc != undefined){
+                searchTag = searchTag + '>行政区划：' + searchResData.loc;
+                urlList = urlList + "&q=location:" + searchResData.loc;
+            }
+            if(searchResData.relName != undefined){
+                searchTag = searchTag + '>文物名：' + searchResData.relName;
+                urlList = urlList + "&q=name:" + searchResData.relName;
+            }
+            if(searchResData.musName != undefined){
+                searchTag = searchTag + '>博物馆名：' + searchResData.musName;
+                urlList = urlList + "&q=museum_name:" + searchResData.musName;
+            }
+            if (searchResData.loc == undefined && searchResData.relName == undefined && searchResData.musName == undefined ) {
+                urlList = urlList + "&q=*:*";
+            }
+
         }
         if(searchResData.lab != undefined){
             searchTag = searchTag + '>' + searchResData.lab;
             urlList = urlList + "&fq=" + searchResData.labTy + ":" + searchResData.lab;
         }
-        if(searchResData.loc != undefined){
-            searchTag = searchTag + '>行政区划：' + searchResData.loc;
-            urlList = urlList + "&fq=location:" + searchResData.loc;
-        }
-        if(searchResData.relName != undefined){
-            searchTag = searchTag + '>文物名：' + searchResData.relName;
-            urlList = urlList + "&fq=name:" + searchResData.relName;
-        }
-        if(searchResData.musName != undefined){
-            searchTag = searchTag + '>博物馆名：' + searchResData.musName;
-            urlList = urlList + "&fq=museum_name:" + searchResData.musName;
-        }
+
         if(searchResData.dyn != undefined){
             searchResData.dyn.forEach(function(dyn){
                 searchTag = searchTag + '>' + dyn;
