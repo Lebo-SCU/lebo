@@ -32,8 +32,8 @@ $(document).on("pageshow","#complex-search",function(){ // 当进入页面二时
 
 			break;
 		}
-		if ($(document).find("input[name='sort']").checked) {
-		searchResData.sortlev = $("input[name='sort']").val();
+		if ($(document).find('input:radio[name="sort_levell"]:checked').val()) {
+		searchResData.sortlev = $("input[name='sort_levell']").val();
 
 		}
 
