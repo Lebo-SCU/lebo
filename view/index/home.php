@@ -5,9 +5,11 @@
 	</div>
 
 	<div data-role="main" class="ui-content">
+
 	<h1><p class="text-center">乐博</p></h1>
 	<h3><p class="text-center">Lebo</p></h3>
 	<input type="search" name="search" id="search" placeholder="搜索内容...">
+
 	<div class="col-xs-10" >
 		<a class="daohang" id="taoqi" href="#searchRes">陶器</a>
 		<a class="daohang" id="shufa" href="#searchRes">书法</a>

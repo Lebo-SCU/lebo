@@ -11,7 +11,7 @@
 
         <div class="ui-field-contain">
             <div class="col-xs-10">
-                <input type="search" name="search" id="search" placeholder="搜索内容...">
+                <input type="text" name="search" id="search" placeholder="搜索内容..." />
             </div>
             <div class="col-xs-2">
                 <a class="submit" data-role="button" href="#searchRes" >Go</a>

@@ -71,12 +71,8 @@ main.doSea = function(searchResData) {
         var searchTag = "首页>搜索";
         var urlList = "http://120.76.144.46:8080/solr/lebojson/select?indent=on&wt=json";
         if(searchResData.qes != undefined){
-            if (searchResData.qes == "") {
-                urlList = urlList + "&q=*:*";
-            }else{
-                searchTag = searchTag + '>' + searchResData.qes;
-                urlList = urlList + "&q=" + searchResData.qes;
-            }
+            searchTag = searchTag + '>' + searchResData.qes;
+            urlList = urlList + "&q=" + searchResData.qes;
         }else{
             urlList = urlList + "&q=*:*";
         }
@@ -85,15 +81,15 @@ main.doSea = function(searchResData) {
             urlList = urlList + "&fq=" + searchResData.labTy + ":" + searchResData.lab;
         }
         if(searchResData.loc != undefined){
-            searchTag = searchTag + '>' + searchResData.loc;
+            searchTag = searchTag + '>行政区划：' + searchResData.loc;
             urlList = urlList + "&fq=location:" + searchResData.loc;
         }
         if(searchResData.relName != undefined){
-            searchTag = searchTag + '>' + searchResData.relName;
+            searchTag = searchTag + '>文物名：' + searchResData.relName;
             urlList = urlList + "&fq=name:" + searchResData.relName;
         }
         if(searchResData.musName != undefined){
-            searchTag = searchTag + '>' + searchResData.musName;
+            searchTag = searchTag + '>博物馆名：' + searchResData.musName;
             urlList = urlList + "&fq=museum_name:" + searchResData.musName;
         }
         if(searchResData.dyn != undefined){
