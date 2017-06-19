@@ -1,13 +1,15 @@
-﻿
+﻿<link rel="stylesheet" href="css/index/home.css">
 <div data-role="page" id="home">
 	<div data-role="header">
 		<h1>这是乐博主页</h1>
 	</div>
 
 	<div data-role="main" class="ui-content">
-
-	<h1><p class="text-center">乐博</p></h1>
-	<h3><p class="text-center">Lebo</p></h3>
+	<div class="homeBg">
+	<img class="homeBgImg" src="images/bg.png" width="200" align="center">
+	<!-- <h1><p class="text-center">乐博</p></h1>
+	<h3><p class="text-center">Lebo</p></h3> -->
+	</div>
 	<input type="search" name="homeSer" id="homeSer" placeholder="搜索内容...">
 
 	<div class="col-xs-10" >

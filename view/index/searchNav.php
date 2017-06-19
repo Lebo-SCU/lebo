@@ -75,9 +75,34 @@
       <div class="ui-block-b"><a class="navDyn" href="#searchRes">清(1616~1911)</a></div>
       <div class="ui-block-a"><a class="navDyn" href="#searchRes">中华民国</a></div>
       <div class="ui-block-b"><a class="navDyn" href="#searchRes">中华人民共和国(1949年10月1日成立)</a></div>
-      
-      
     </div>
+
+    <p>按地点划分:</p>
+    <div class="ui-grid-b">
+      <div class="ui-block-a"><a class="navLoc" href="#searchRes">夏(约前2070~前1600)</a></div>
+      <div class="ui-block-b"><a class="navLoc" href="#searchRes">商(前1600~前1046)</a></div>
+      <div class="ui-block-c"><a class="navLoc" href="#searchRes">周</a></div>
+      <div class="ui-block-a"><a class="navLoc" href="#searchRes">秦(前221~前206)</a></div>
+      <div class="ui-block-b"><a class="navLoc" href="#searchRes">汉</a></div>
+      <div class="ui-block-c"><a class="navLoc" href="#searchRes">三国</a></div>
+      <div class="ui-block-a"><a class="navLoc" href="#searchRes">西晋(265~317)</a></div>
+      <div class="ui-block-b"><a class="navLoc" href="#searchRes">东晋十六国</a></div>
+      <div class="ui-block-c"><a class="navLoc" href="#searchRes">南北朝</a></div>
+      <div class="ui-block-a"><a class="navLoc" href="#searchRes">隋(581~618)</a></div>
+      <div class="ui-block-b"><a class="navLoc" href="#searchRes">唐(618~907)</a></div>
+      <div class="ui-block-c"><a class="navLoc" href="#searchRes">五代十国</a></div>
+      <div class="ui-block-a"><a class="navLoc" href="#searchRes">宋</a></div>
+      <div class="ui-block-b"><a class="navLoc" href="#searchRes">辽(907~1125)</a></div>
+      <div class="ui-block-c"><a class="navLoc" href="#searchRes">西夏(1038~1227)</a></div>
+      <div class="ui-block-a"><a class="navLoc" href="#searchRes">金(1115~1234)</a></div>
+      <div class="ui-block-b"><a class="navLoc" href="#searchRes">元(1206~1368)</a></div>
+      <div class="ui-block-c"><a class="navLoc" href="#searchRes">明(1368~1644)</a></div>
+      <div class="ui-block-a"><a class="navLoc" href="#searchRes">清(1616~1911)</a></div>
+      <div class="ui-block-b"><a class="navLoc" href="#searchRes">中华民国</a></div>
+      <div class="ui-block-c"><a class="navLoc" href="#searchRes">中华人民共和国(1949年10月1日成立)</a></div>
+    </div>
+
+
   </div>
 
 </div> 

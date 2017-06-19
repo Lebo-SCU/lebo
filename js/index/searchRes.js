@@ -17,22 +17,23 @@ var $items = $(document).find('.all-items');
 
 
 $(document).on("pageinit","#searchRes",function(){
-        var mainData = main.doSea(transData);
-        
+    //var mainData = main.doSea(transData);
+    
 });
 
 
 $(document).on("pagebeforeshow","#searchRes",function(){ 
-                    $("li").remove();
-        });
+    $("li").remove();
+    
+});
 
 
 $(document).on("pageshow","#searchRes",function(){
 
         var mainData = main.doSea(transData);
-        $(document).find('.searchTag').text(mainData.searchTag);
         // $(document).find('.all-item').remove();
-
+        $(document).find('.searchTag').text(mainData.searchTag);
+      
         main.doAjax({
 
             url:mainData.urlList,
