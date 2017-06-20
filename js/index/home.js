@@ -142,9 +142,7 @@ $(document).on("pageshow","#home",function(){
     });
     $('#poem').bind('click', function() {
         transData = {};
-        transData.qes = "唐诗宋词"
-        transData.lab ="书法、绘画";
-        transData.labTy="propertyType";
+        transData.qes = "山西木雕"
     });
 
     $('.homeSer').bind('click', function() {
