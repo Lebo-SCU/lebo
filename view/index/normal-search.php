@@ -6,8 +6,11 @@
 
 	<div data-role="main" class="ui-content">
 		<form>
-			<input type="text" name="normal-name" id="normal-name" size="30" placeholder="搜索内容..." onkeyup="nor.showResult(this.value)">
-			<div id="livesearch"></div>
+			
+			<ul data-role="listview" data-inset="true">
+				<input type="text" name="normal-name" id="normal-name" size="30" placeholder="搜索内容..." onkeyup="nor.showResult(this.value)">
+				<div id="livesearch"><li></li></div>
+			</ul>
 		</form>
 		<div class="col-xs-4">
 			<a href="#searchRes" data-transition="fade" class="ui-btn ui-btn-inline normal-go">Go</a>
