@@ -1,6 +1,6 @@
 ﻿<div data-role="page" id="normal-search">
 	<div data-role="header">
-		<a href="#home"  data-role="button">返回</a>
+		<a href="" data-role="button" data-rel="back">返回</a>
 		<h1>普通搜索</h1>
 	</div>
 
@@ -9,7 +9,11 @@
 			
 			<ul data-role="listview" data-inset="true">
 				<input type="text" name="normal-name" id="normal-name" size="30" placeholder="搜索内容..." onkeyup="nor.showResult(this.value)">
-				<div id="livesearch"><li></li></div>
+				<div id="livesearch">
+					<li class="nsItem list-group-item">
+						<div class="nsName"></div>
+					</li>
+				</div>
 			</ul>
 		</form>
 		<div class="col-xs-4">
