@@ -39,7 +39,7 @@ $(document).on("pageshow","#searchRes",function(){
             url:mainData.urlList,
             success:function(ret) { 
                     console.log(ret);
-                total_page = parseInt(ret.response.numFound/10);
+                total_page = Math.ceil(ret.response.numFound/10);
                 $("#total_page").text(ret.response.start+"/"+total_page+"页");    
 
                 ret.response.docs.forEach(function (res) {
