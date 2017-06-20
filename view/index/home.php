@@ -1,5 +1,5 @@
 ﻿<link rel="stylesheet" href="css/index/home.css">
-<div data-role="page" id="home">
+<div data-role="page" id="home" data-dom-cache="true">
 	<div data-role="header">
 		<h1>乐博Lebo</h1>
 	</div>
