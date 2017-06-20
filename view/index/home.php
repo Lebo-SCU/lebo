@@ -27,7 +27,7 @@
 				<span class="label label-danger">青铜方鼎</span>
 			</a>
 			<a class="homeTag" id="poem" href="#searchRes">
-				<span class="label label-info">唐诗宋词</span>
+				<span class="label label-info">山西木雕</span>
 			</a>
 		</h4>
 
