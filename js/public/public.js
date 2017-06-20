@@ -100,7 +100,7 @@ main.doSea = function(searchResData) {
         var data = {};
         console.log(searchResData);
         var searchTag = "首页>搜索";
-        var urlList = "http://120.76.144.46:8080/solr/lebojson/select?indent=on&wt=json";
+        var urlList = "http://120.76.144.46:8080/solr/lebojson/select?indent=on&wt=json&defType=edismax&mm=100";
         
         if(searchResData.qes != undefined ){
             searchTag = searchTag + '>' + searchResData.qes;
