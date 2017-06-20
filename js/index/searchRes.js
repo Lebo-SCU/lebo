@@ -86,10 +86,10 @@ $(document).on("pageshow","#searchRes",function(){
                     var $item = $template.clone(true);
                     var myimg = "http://kydww.sach.gov.cn" + res.img[0];
                     $item.find('.myimg').attr('src', myimg);
-                    $item.find('.relName').text(res.name);
-                    $item.find('.dyn').text(res.productionDynasty);
+                    $item.find('.relName').htmlhtml(res.name);
+                    $item.find('.dyn').htmlhtml(res.productionDynasty);
                     $item.find('.level').text(main.getTypeDesc(res.level));
-                    $item.find('.musName').text(res.museum_name);
+                    $item.find('.musName').htmlhtml(res.museum_name);
                     $items.append($item);
                     $item.bind("click", function(){
                         //transData = {};
@@ -125,10 +125,10 @@ $(document).on("pageshow","#searchRes",function(){
                             var $item = $template.clone(true);
                             var myimg = "http://kydww.sach.gov.cn" + res.img[0];
                             $item.find('.myimg').attr('src', myimg);
-                            $item.find('.relName').text(res.name);
+                            $item.find('.relName').html(res.name);
                             $item.find('.dyn').text(res.productionDynasty);
-                            $item.find('.level').text(main.getTypeDesc(res.level));
-                            $item.find('.musName').text(res.museum_name);
+                            $item.find('.level').html(main.getTypeDesc(res.level));
+                            $item.find('.musName').html(res.museum_name);
                             $items.append($item);
                             $item.bind("click", function(){
                                 //transData = {};
