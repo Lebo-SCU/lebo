@@ -7,7 +7,7 @@
 		<div class="homeBg">
 			<img class="homeBgImg" src="images/bg.png" width="200" align="center">
 		</div>
-		<input type="search" name="homeSer" id="homeSer" placeholder="搜索内容...">
+		<input type="text" name="homeSer" class="homeSer" id="normal-search" placeholder="搜索内容...">
 		<h4> 
 			<a class="homeTag" id="taoqi" href="#searchRes">
 				<span class="label label-info">陶器</span>
@@ -32,16 +32,16 @@
 		</h4>
 
 
-		<ul class="home-items"  data-role="listview"  data-inset="true">
-            <li class="home-item list-group-item" >
+		<ul class="homeItems"  data-role="listview"  data-inset="true">
+            <li class="homeItem list-group-item" >
                 <img class="homeMyimg" src="images/wrong.jpeg" width="280" onerror="main.avatar_error()" />
                 <div class="homeRelName" ></div>
                 <div class="container">
                     <div class="row">
                         <div class="details">
-                            <div class="home-dyn col-xs-10"></div>
-                            <div class="home-level col-xs-2"></div>
-                            <div class="home-musName col-xs-12" ></div>
+                            <div class="homeDyn col-xs-10"></div>
+                            <div class="homeLevel col-xs-2"></div>
+                            <div class="homeMusName col-xs-12" ></div>
                         </div>
                     </div>
                 </div>
