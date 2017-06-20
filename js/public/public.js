@@ -68,7 +68,7 @@ main.getTypeDesc = function(type) {
 
 main.doLighting =function(response) {
     console.log(response);
-    if (response.highlighting != undefined && response.highlighting[response.response.docs[0]] != undefined) {
+    if (response.highlighting != undefined && response.response.docs[0] != undefined) {
 
             console.log(response.highlighting[response.response.docs[0].id]);
 
