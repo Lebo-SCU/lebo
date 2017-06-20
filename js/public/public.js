@@ -13,8 +13,6 @@ main.doAjax = function(params) {
     	type:'GET',
     	dataType:'json',
 		success:function(response) {
-			console.log(response);
-			console.log(params.url);
 
 			//返回成功
 			if (response.responseHeader) {

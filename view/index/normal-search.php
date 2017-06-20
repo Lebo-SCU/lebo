@@ -1,6 +1,6 @@
 ﻿<div data-role="page" id="normal-search">
 	<div data-role="header">
-		<a href="" data-role="button" data-rel="back">返回</a>
+		<a href="#home"  data-role="button">返回</a>
 		<h1>普通搜索</h1>
 	</div>
 
