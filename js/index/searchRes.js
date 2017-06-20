@@ -31,6 +31,7 @@ $(document).on("pagebeforeshow","#searchRes",function(){
 $(document).on("pageshow","#searchRes",function(){
 
         var mainData = main.doSea(transData);
+        var total_page = 0;
         // $(document).find('.all-item').remove();
         $(document).find('.searchTag').text(mainData.searchTag);
         main.doAjax({
@@ -38,7 +39,8 @@ $(document).on("pageshow","#searchRes",function(){
             url:mainData.urlList,
             success:function(ret) { 
                     console.log(ret);
-                $("#total_page").text(ret.response.start+"/"+parseInt(ret.response.numFound/10)+"页");    
+                total_page = parseInt(ret.response.numFound/10);
+                $("#total_page").text(ret.response.start+"/"+total_page+"页");    
 
                 ret.response.docs.forEach(function (res) {
                     
@@ -67,43 +69,45 @@ $(document).on("pageshow","#searchRes",function(){
 
     //下一页跳转
     $('.next_page').bind('click', function() {
-        $("li").remove();
-        if (transData.start) {
-            transData.start += 1;
-        } else {
-            transData.start = 2;
+        if (!transData.start ) {
+            transData.start = 1;
         }
 
-        var mainData = main.doSea(transData);
-        main.doAjax({
+        if (transData.start < total_page) {
+            transData.start += 1;
+            $("li").remove();
+            var mainData = main.doSea(transData);
+            main.doAjax({
 
-            url:mainData.urlList,
-            success:function(ret) { 
-                $("#total_page").text(ret.response.start+"/"+parseInt(ret.response.numFound/10)+"页");    
+                url:mainData.urlList,
+                success:function(ret) { 
+                    $("#total_page").text(ret.response.start+"/"+total_page+"页");    
 
-                ret.response.docs.forEach(function (res) {
-                    
-                    var $item = $template.clone(true);
-                    var myimg = "http://kydww.sach.gov.cn" + res.img[0];
-                    $item.find('.myimg').attr('src', myimg);
-                    $item.find('.relName').htmlhtml(res.name);
-                    $item.find('.dyn').htmlhtml(res.productionDynasty);
-                    $item.find('.level').text(main.getTypeDesc(res.level));
-                    $item.find('.musName').htmlhtml(res.museum_name);
-                    $items.append($item);
-                    $item.bind("click", function(){
-                        //transData = {};
-                        searchDet = res;
-                        $.mobile.changePage("#searchDetails"); 
+                    ret.response.docs.forEach(function (res) {
+                        
+                        var $item = $template.clone(true);
+                        var myimg = "http://kydww.sach.gov.cn" + res.img[0];
+                        $item.find('.myimg').attr('src', myimg);
+                        $item.find('.relName').htmlhtml(res.name);
+                        $item.find('.dyn').htmlhtml(res.productionDynasty);
+                        $item.find('.level').text(main.getTypeDesc(res.level));
+                        $item.find('.musName').htmlhtml(res.museum_name);
+                        $items.append($item);
+                        $item.bind("click", function(){
+                            //transData = {};
+                            searchDet = res;
+                            $.mobile.changePage("#searchDetails"); 
+
+                        });
+
 
                     });
+                    
 
+                }
+            }); 
+        }
 
-                });
-                
-
-            }
-        }); 
 
     });
 
@@ -118,7 +122,7 @@ $(document).on("pageshow","#searchRes",function(){
 
                     url:mainData.urlList,
                     success:function(ret) { 
-                        $("#total_page").text(ret.response.start+"/"+parseInt(ret.response.numFound/10)+"页");    
+                        $("#total_page").text(ret.response.start+"/"+total_page+"页");    
 
                         ret.response.docs.forEach(function (res) {
                             

@@ -13,8 +13,6 @@ main.doAjax = function(params) {
     	type:'GET',
     	dataType:'json',
 		success:function(response) {
-			console.log(response);
-			console.log(params.url);
 
 			//返回成功
 			if (response.responseHeader) {
@@ -70,7 +68,7 @@ main.getTypeDesc = function(type) {
 
 main.doLighting =function(response) {
     console.log(response);
-    if (response.highlighting != undefined) {
+    if (response.highlighting != undefined && response.highlighting[response.response.docs[0]] != undefined) {
 
             console.log(response.highlighting[response.response.docs[0].id]);
 
@@ -124,7 +122,7 @@ main.doSea = function(searchResData) {
                 urlList = urlList + "&q=museum_name:" + searchResData.musName + '&hl.fl=museum_name&hl.simple.post=</font>&hl.simple.pre=<font%20color="red">&hl=on';
                 anchor = 1;
            }
-            if (anchor == 0 ) {
+            if (anchor == 0 && searchResData.lab == undefined) {
                 urlList = urlList + "&q=*:*";
             }
 
