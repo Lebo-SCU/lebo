@@ -8,7 +8,6 @@
 			<img class="homeBgImg" src="images/bg.png" width="200" align="center">
 		</div>
 		<input type="search" name="homeSer" id="homeSer" placeholder="搜索内容...">
-
 		<h4> 
 			<a class="homeTag" id="taoqi" href="#searchRes">
 				<span class="label label-info">陶器</span>

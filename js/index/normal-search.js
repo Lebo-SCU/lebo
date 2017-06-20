@@ -12,7 +12,7 @@
 
 	nor.showResult = function(str)
         {
-            var seaUrl = "http://120.76.144.46:8080/solr/lebojson/select?fl=name&indent=on&q=name:"+str+"~0.8&spellcheck=on&wt=json";
+            var seaUrl = "http://120.76.144.46:8080/solr/lebojson/select?fl=name&indent=on&q=name:"+str+"*~0.9&spellcheck=on&wt=json&defType=edismax&mm=100";
 
             main.doAjax({
 
@@ -20,7 +20,7 @@
                 success:function(ret) { 
                     
                     ret.response.docs.forEach(function (res) {
-                        document.getElementById("livesearch").innerHTML+="<li>"+res.name+"</li>";
+                        document.getElementById("livesearch").innerHTML="<li>"+res.name+"</li>";
                         document.getElementById("livesearch").style.border="1px solid #A5ACB2";
                     });
                 
