@@ -67,7 +67,6 @@ main.getTypeDesc = function(type) {
 
 
 main.doLighting =function(response) {
-    console.log(response);
     if (response.highlighting != undefined && response.response.docs[0] != undefined) {
 
             console.log(response.highlighting[response.response.docs[0].id]);
@@ -91,6 +90,11 @@ main.doLighting =function(response) {
     }
 
     return response;
+}
+
+main.getRandomUrl =function() {
+    var random = parseInt(Math.random()*100000%13404);
+    return "http://120.76.144.46:8080/solr/lebojson/select?indent=on&wt=json&q=*:*&start="+random;
 }
 
 

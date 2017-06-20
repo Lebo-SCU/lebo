@@ -33,7 +33,33 @@
 
 
 		<ul class="homeItems"  data-role="listview"  data-inset="true">
-            <li class="homeItem list-group-item" >
+            <li class="homeItem0 list-group-item" >
+                <img class="homeMyimg" src="images/wrong.jpeg" width="280" onerror="main.avatar_error()" />
+                <div class="homeRelName" ></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="details">
+                            <div class="homeDyn col-xs-10"></div>
+                            <div class="homeLevel col-xs-2"></div>
+                            <div class="homeMusName col-xs-12" ></div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="homeItem1 list-group-item" >
+                <img class="homeMyimg" src="images/wrong.jpeg" width="280" onerror="main.avatar_error()" />
+                <div class="homeRelName" ></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="details">
+                            <div class="homeDyn col-xs-10"></div>
+                            <div class="homeLevel col-xs-2"></div>
+                            <div class="homeMusName col-xs-12" ></div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="homeItem2 list-group-item" >
                 <img class="homeMyimg" src="images/wrong.jpeg" width="280" onerror="main.avatar_error()" />
                 <div class="homeRelName" ></div>
                 <div class="container">

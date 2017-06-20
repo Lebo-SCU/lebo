@@ -9,43 +9,110 @@ $(document).on("pagebeforeshow","#home",function(){
 
 $(document).on("pageshow","#home",function(){
 	
-    for ( var i = 0; i<3;i++){
-        var random_list = {};
-        
-        var random = parseInt(Math.random()*100000%13404);
-        var homeUrl = "http://120.76.144.46:8080/solr/lebojson/select?indent=on&wt=json&q=*:*&start="+random;
+
+        var random_list0 = {};
+        var random_list1 = {};
+        var random_list2 = {};
+
+        var random_url = main.getRandomUrl();
         main.doAjax({
         
-            url:homeUrl,
+            url:random_url,
 
             success:function(ret) { 
             
-                console.log(ret.response.docs[0]);
                 random_list = ret.response.docs[0];
-            
+		        var $item = $(document).find('.homeItem0');
+		        var myimg = "http://kydww.sach.gov.cn" + random_list.img[0];
+		        $item.find('.homeMyimg').attr('src', myimg);
+		        $item.find('.homeRelName').text(random_list.name);
+		        $item.find('.homeDyn').text(random_list.productionDynasty);
+		        $item.find('.homeLevel').text(main.getTypeDesc(random_list.level));
+		        $item.find('.homeMusName').text(random_list.museum_name);
+		        $item.bind("click", function(){
+		            searchDet = {};
+		            searchDet = random_list0;
+		            $.mobile.changePage("#searchDetails"); 
 
-        
-        console.log(random_list);
-        var $item = $homeTemplate.clone(true);
-        var myimg = "http://kydww.sach.gov.cn" + random_list.img[0];
-        $item.find('.homeMyimg').attr('src', myimg);
-        $item.find('.homeRelName').text(random_list.name);
-        $item.find('.homeDyn').text(random_list.productionDynasty);
-        $item.find('.homeLevel').text(main.getTypeDesc(random_list.level));
-        $item.find('.homeMusName').text(random_list.museum_name);
-        $homeItems.append($item);
-        $item.bind("click", function(){
-            searchDet = {};
-            searchDet = random_list;
-            $.mobile.changePage("#searchDetails"); 
-
-        });
+		        });
 
             }
         }); 
 
+        random_url = main.getRandomUrl();
+        main.doAjax({
+        
+            url:random_url,
 
-    }
+            success:function(ret) { 
+            
+                random_list0 = ret.response.docs[0];
+		        var $item = $(document).find('.homeItem0');
+		        var myimg = "http://kydww.sach.gov.cn" + random_list0.img[0];
+		        $item.find('.homeMyimg').attr('src', myimg);
+		        $item.find('.homeRelName').text(random_list0.name);
+		        $item.find('.homeDyn').text(random_list0.productionDynasty);
+		        $item.find('.homeLevel').text(main.getTypeDesc(random_list0.level));
+		        $item.find('.homeMusName').text(random_list0.museum_name);
+		        $item.bind("click", function(){
+		            searchDet = {};
+		            searchDet = random_list0;
+		            $.mobile.changePage("#searchDetails"); 
+
+		        });
+
+            }
+        }); 
+
+        random_url = main.getRandomUrl();
+        main.doAjax({
+        
+            url:random_url,
+
+            success:function(ret) { 
+            
+                random_list1 = ret.response.docs[0];
+		        var $item = $(document).find('.homeItem1');
+		        var myimg = "http://kydww.sach.gov.cn" + random_list1.img[0];
+		        $item.find('.homeMyimg').attr('src', myimg);
+		        $item.find('.homeRelName').text(random_list1.name);
+		        $item.find('.homeDyn').text(random_list1.productionDynasty);
+		        $item.find('.homeLevel').text(main.getTypeDesc(random_list1.level));
+		        $item.find('.homeMusName').text(random_list1.museum_name);
+		        $item.bind("click", function(){
+		            searchDet = {};
+		            searchDet = random_list1;
+		            $.mobile.changePage("#searchDetails"); 
+
+		        });
+
+            }
+        }); 
+
+        random_url = main.getRandomUrl();
+        main.doAjax({
+        
+            url:random_url,
+
+            success:function(ret) { 
+            
+                random_list2 = ret.response.docs[0];
+		        var $item = $(document).find('.homeItem2');
+		        var myimg = "http://kydww.sach.gov.cn" + random_list2.img[0];
+		        $item.find('.homeMyimg').attr('src', myimg);
+		        $item.find('.homeRelName').text(random_list2.name);
+		        $item.find('.homeDyn').text(random_list2.productionDynasty);
+		        $item.find('.homeLevel').text(main.getTypeDesc(random_list2.level));
+		        $item.find('.homeMusName').text(random_list2.museum_name);
+		        $item.bind("click", function(){
+		            searchDet = {};
+		            searchDet = random_list2;
+		            $.mobile.changePage("#searchDetails"); 
+
+		        });
+
+            }
+        }); 
 
 });
 
