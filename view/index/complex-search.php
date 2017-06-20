@@ -101,6 +101,36 @@
             </fieldset>
         </div>
 
+        <div data-role="collapsible">
+            <h1>类别</h1>
+            <fieldset data-role="controlgroup">
+                <label for="baoshi">玉石器、宝石</label>
+                <input type="checkbox" name="propertyType" id="baoshi" value="玉石器、宝石">
+
+                <label for="taoqi">陶器</label>
+                <input type="checkbox" name="propertyType" id="taoqi" value="陶器">
+
+                <label for="ciqi">瓷器</label>
+                <input type="checkbox" name="propertyType" id="ciqi" value="瓷器"> 
+
+                <label for="tongqi">铜器</label>
+                <input type="checkbox" name="propertyType" id="tongqi" value="铜器"> 
+                
+                <label for="shufa">书法、绘画</label>
+                <input type="checkbox" name="propertyType" id="shufa" value="书法、绘画"> 
+                
+                <label for="jiagu">甲骨</label>
+                <input type="checkbox" name="propertyType" id="jiagu" value="甲骨"> 
+                
+                <label for="wuqi">武器</label>
+                <input type="checkbox" name="propertyType" id="wuqi" value="武器"> 
+                
+                <label for="pige">皮革</label>
+                <input type="checkbox" name="propertyType" id="pige" value="皮革"> 
+                
+
+            </fieldset>
+        </div>
 
 
 

@@ -108,19 +108,23 @@ main.doSea = function(searchResData) {
 
         }else{
 
+            var anchor = 0;
             if(searchResData.loc != undefined){
                 searchTag = searchTag + '>行政区划：' + searchResData.loc;
                 urlList = urlList + "&q=location:" + searchResData.loc + '&hl.fl=location&hl.simple.post=</font>&hl.simple.pre=<font%20color="red">&hl=on';
+                anchor = 1;
             }
             if(searchResData.relName != undefined){
                 searchTag = searchTag + '>文物名：' + searchResData.relName;
                 urlList = urlList + "&q=name:" + searchResData.relName + '&hl.fl=name&hl.simple.post=</font>&hl.simple.pre=<font%20color="red">&hl=on';
+                anchor = 1;
             }
             if(searchResData.musName != undefined){
                 searchTag = searchTag + '>博物馆名：' + searchResData.musName;
                 urlList = urlList + "&q=museum_name:" + searchResData.musName + '&hl.fl=museum_name&hl.simple.post=</font>&hl.simple.pre=<font%20color="red">&hl=on';
-            }
-            if (searchResData.loc == undefined && searchResData.relName == undefined && searchResData.musName == undefined ) {
+                anchor = 1;
+           }
+            if (anchor == 0 ) {
                 urlList = urlList + "&q=*:*";
             }
 
@@ -133,17 +137,24 @@ main.doSea = function(searchResData) {
         if(searchResData.dyn != undefined){
             searchResData.dyn.forEach(function(dyn){
                 searchTag = searchTag + '>朝代：' + dyn;
-                urlList = urlList + "&q=productionDynasty:" + dyn;
+                urlList = urlList + "&fq=productionDynasty:" + dyn;
             });
         }
         if(searchResData.level != undefined){
             searchTag = searchTag + '>级别：' + searchResData.level;
-            urlList = urlList + "&q=level:" + searchResData.level;
+            urlList = urlList + "&fq=level:" + searchResData.level;
         }
         if(searchResData.mater != undefined){
             searchResData.mater.forEach(function(mater){
                 searchTag = searchTag + '>质地：' + mater;
-                urlList = urlList + "&q=materials:" + mater;
+                urlList = urlList + "&fq=materials:" + mater;
+            });
+            
+        }
+        if(searchResData.prot != undefined){
+            searchResData.prot.forEach(function(prot){
+                searchTag = searchTag + '>质地：' + prot;
+                urlList = urlList + "&fq=propertyType:" + prot;
             });
             
         }

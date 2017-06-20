@@ -54,6 +54,13 @@ $(document).on("pageshow","#complex-search",function(){ // 当进入页面二时
 	  	} 
 		searchResData.mater = mater;
 
+		obj=document.getElementsByName('propertyType');   
+	  	var prot =new Array();
+	  	for(var i=0; i<obj.length; i++){    
+	    	if(obj[i].checked)  prot.push(obj[i].value);  
+	  	} 
+		searchResData.prot = prot;
+
 		if (searchResData.qes == "") {
 			searchResData.qes = null;
 		}
