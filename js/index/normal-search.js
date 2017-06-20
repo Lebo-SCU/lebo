@@ -32,9 +32,7 @@ $(document).on("pageshow","#normal-search",function(){
 
                     });
 
-                    $(document).find('#livesearch li').forEach
-                
-
+                    
                 }
             }); 
         
