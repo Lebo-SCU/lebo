@@ -24,7 +24,7 @@ $(document).on("pageinit","#searchRes",function(){
 
 
 $(document).on("pagebeforeshow","#searchRes",function(){ 
-    $("li").remove();
+    $(".all-item").remove();
     transData.start = 1;
 });
 
