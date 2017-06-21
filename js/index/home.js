@@ -4,7 +4,7 @@
 
 
 
-$(document).on("pagebeforeshow","#home",function(){
+$(document).on("pageshow","#home",function(){
 	
 
 
