@@ -136,28 +136,39 @@ main.doSea = function(searchResData) {
             searchTag = searchTag + '>' + searchResData.lab;
             urlList = urlList + "&q=" + searchResData.labTy + ":" + searchResData.lab;
         }
-        if(searchResData.dyn != undefined){
-            searchResData.dyn.forEach(function(dyn){
-                searchTag = searchTag + '>朝代：' + dyn;
-                urlList = urlList + "&fq=productionDynasty:" + dyn;
-            });
-        }
         if(searchResData.level != undefined){
             searchTag = searchTag + '>级别：' + searchResData.level;
             urlList = urlList + "&fq=level:" + searchResData.level;
+        }        
+        if(searchResData.dyn != "" && searchResData.dyn != undefined){
+        	var dyns ="";
+            searchResData.dyn.forEach(function(dyn){
+                searchTag = searchTag + '>朝代：' + dyn;
+                dyns = dyns+","+dyn;
+            });
+            dyns = dyns.substring(1);
+            urlList = urlList + "&fq=productionDynasty:" + dyns;
+
         }
-        if(searchResData.mater != undefined){
+
+        if(searchResData.mater != "" && searchResData.mater != undefined){
+        	var maters = "";
             searchResData.mater.forEach(function(mater){
                 searchTag = searchTag + '>质地：' + mater;
-                urlList = urlList + "&fq=materials:" + mater;
+                maters = maters + "," + mater;
             });
+            maters = maters.substring(1);
+            urlList = urlList + "&fq=materials:" + maters;
             
         }
-        if(searchResData.prot != undefined){
+        if(searchResData.prot != "" && searchResData.prot != undefined){
+        	var prots = "";
             searchResData.prot.forEach(function(prot){
                 searchTag = searchTag + '>质地：' + prot;
-                urlList = urlList + "&fq=propertyType:" + prot;
+                prots = prots +"," + prot;
             });
+            prots = prots.substring(1);
+            urlList = urlList + "&fq=propertyType:" + prots;
             
         }
         // if(searchResData.typ[0] != undefined){

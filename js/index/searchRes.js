@@ -11,6 +11,7 @@
     // searchResData.sort = "级别从高到低";
 var $template = $(document).find('.all-item');
 var $items = $(document).find('.all-items');
+var total_page = 0;
 
 
 
@@ -31,7 +32,6 @@ $(document).on("pagebeforeshow","#searchRes",function(){
 $(document).on("pageshow","#searchRes",function(){
 
         var mainData = main.doSea(transData);
-        var total_page = 0;
         // $(document).find('.all-item').remove();
         $(document).find('.searchTag').text(mainData.searchTag);
         main.doAjax({
@@ -72,7 +72,6 @@ $(document).on("pageshow","#searchRes",function(){
         if (!transData.start ) {
             transData.start = 1;
         }
-
         if (transData.start < total_page) {
             transData.start += 1;
             $("li").remove();
