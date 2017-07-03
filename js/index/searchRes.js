@@ -31,40 +31,124 @@ $(document).on("pagebeforeshow","#searchRes",function(){
 
 $(document).on("pageshow","#searchRes",function(){
 
-        var mainData = main.doSea(transData);
-        // $(document).find('.all-item').remove();
-        $(document).find('.searchTag').text(mainData.searchTag);
-        main.doAjax({
+    var mainData = main.doSea(transData);
+    // $(document).find('.all-item').remove();
+    $(document).find('.searchTag').text(mainData.searchTag);
+    main.doAjax({
 
-            url:mainData.urlList,
-            success:function(ret) { 
-                    console.log(ret);
-                total_page = Math.ceil(ret.response.numFound/10);
-                $("#total_page").text(ret.response.start+"/"+total_page+"页");    
+        url:mainData.urlList,
+        success:function(ret) { 
+                console.log(ret);
+            total_page = Math.ceil(ret.response.numFound/10);
+            $("#total_page").text(ret.response.start+"/"+total_page+"页");    
 
-                ret.response.docs.forEach(function (res) {
-                    
-                    var $item = $template.clone(true);
-                    var myimg = "http://kydww.sach.gov.cn" + res.img[0];
-                    $item.find('.myimg').attr('src', myimg);
-                    $item.find('.relName').html(res.name);
-                    $item.find('.dyn').html(res.productionDynasty);
-                    $item.find('.level').html(main.getTypeDesc(res.level));
-                    $item.find('.musName').html(res.museum_name);
-                    $items.append($item);
-                    $item.bind("click", function(){
-                        //transData = {};
-                        searchDet = res;
-                        $.mobile.changePage("#searchDetails"); 
-
-                    });
-
+            ret.response.docs.forEach(function (res) {
+                
+                var $item = $template.clone(true);
+                var myimg = "http://kydww.sach.gov.cn" + res.img[0];
+                $item.find('.myimg').attr('src', myimg);
+                $item.find('.relName').html(res.name);
+                $item.find('.dyn').html(res.productionDynasty);
+                $item.find('.level').html(main.getTypeDesc(res.level));
+                $item.find('.musName').html(res.museum_name);
+                $items.append($item);
+                $item.bind("click", function(){
+                    //transData = {};
+                    searchDet = res;
+                    $.mobile.changePage("#searchDetails"); 
 
                 });
-                
 
-            }
-        }); 
+
+            });
+            
+
+        }
+    }); 
+
+
+    // //文物等级降序
+    $('.lower').bind('click', function() {
+    
+            transData.sortlev = 'lower';
+            transData.start = 1;
+            $(".all-item").remove();
+            var mainData = main.doSea(transData);
+            main.doAjax({
+
+                url:mainData.urlList,
+                success:function(ret) { 
+                    $("#total_page").text(ret.response.start+"/"+total_page+"页");    
+
+                    ret.response.docs.forEach(function (res) {
+                        
+                        var $item = $template.clone(true);
+                        var myimg = "http://kydww.sach.gov.cn" + res.img[0];
+                        $item.find('.myimg').attr('src', myimg);
+                        $item.find('.relName').html(res.name);
+                        $item.find('.dyn').html(res.productionDynasty);
+                        $item.find('.level').text(main.getTypeDesc(res.level));
+                        $item.find('.musName').html(res.museum_name);
+                        $items.append($item);
+                        $item.bind("click", function(){
+                            //transData = {};
+                            searchDet = res;
+                            $.mobile.changePage("#searchDetails"); 
+
+                        });
+
+
+                    });
+                    
+
+                }
+            }); 
+        
+
+
+    });
+
+    // //文物等级降序
+    $('.upper').bind('click', function() {
+    
+            transData.sortlev = 'upper';
+            transData.start = 1;
+            $(".all-item").remove();
+            var mainData = main.doSea(transData);
+            main.doAjax({
+
+                url:mainData.urlList,
+                success:function(ret) { 
+                    $("#total_page").text(ret.response.start+"/"+total_page+"页");    
+
+                    ret.response.docs.forEach(function (res) {
+                        
+                        var $item = $template.clone(true);
+                        var myimg = "http://kydww.sach.gov.cn" + res.img[0];
+                        $item.find('.myimg').attr('src', myimg);
+                        $item.find('.relName').html(res.name);
+                        $item.find('.dyn').html(res.productionDynasty);
+                        $item.find('.level').text(main.getTypeDesc(res.level));
+                        $item.find('.musName').html(res.museum_name);
+                        $items.append($item);
+                        $item.bind("click", function(){
+                            //transData = {};
+                            searchDet = res;
+                            $.mobile.changePage("#searchDetails"); 
+
+                        });
+
+
+                    });
+                    
+
+                }
+            }); 
+        
+
+
+    });
+
 
 
     //下一页跳转
@@ -74,7 +158,7 @@ $(document).on("pageshow","#searchRes",function(){
         }
         if (transData.start < total_page) {
             transData.start += 1;
-            $("li").remove();
+            $(".all-item").remove();
             var mainData = main.doSea(transData);
             main.doAjax({
 
@@ -114,7 +198,7 @@ $(document).on("pageshow","#searchRes",function(){
     $('.last_page').bind('click', function() {
         if (transData.start) {
             if (transData.start > 1) {
-                $("li").remove();
+                $(".all-item").remove();
                 transData.start -= 1;
                 var mainData = main.doSea(transData);
                 main.doAjax({

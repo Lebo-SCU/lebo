@@ -178,8 +178,15 @@ main.doSea = function(searchResData) {
         //     });
         // }
         if(searchResData.sortlev!= undefined){
-            searchTag = searchTag + '>级别从高到低';
-            urlList = urlList + "&sort=" + searchResData.sortlev+" asc";
+
+            if (searchResData.sortlev == 'lower') {
+                searchTag = searchTag + '>级别从低到高';
+                urlList = urlList + "&sort= level desc";
+            } else {
+                searchTag = searchTag + '>级别从高到低';
+                urlList = urlList + "&sort= level asc";
+            }
+
         }
         if(searchResData.start != undefined){
             urlList = urlList + "&start=" + searchResData.start;
