@@ -12,8 +12,19 @@
 
         <!-- 这里是筛选分面页面的部分,需要实现根据搜索结果动态改变筛选栏目,并且根据选中的筛选项目改变搜索结果和面包屑 -->
         <div data-role="panel" id="myPanel" data-display="overlay"> 
-            <h2>面板头部</h2>
-            <p>你可以通过点击面板外部区域或按下 Esc 键或滑动来关闭面板。</p>
+            <h2>分面</h2>
+            <div data-role="collapsible" data-mini="true" >
+                <h1>文物等级</h1>
+                <ul data-role="listview" data-inset="true">
+                    <li><a href="#">收件箱<span class="ui-li-count">25</span></a></li>
+                    <li><a href="#">发件箱<span class="ui-li-count">432</span></a></li>
+                    <li><a href="#">垃圾箱<span class="ui-li-count">7</span></a></li>
+                    <li>
+                        <label for="shang">商<span class="ui-li-count">7</span></label>
+                        <!-- <input type="checkbox" name="dynasty" id="shang" value="商">  -->
+                    </li>
+                </ul>
+            </div>
         </div>
 
         <!-- 导航栏 -->
