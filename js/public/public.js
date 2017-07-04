@@ -3,6 +3,7 @@ var searchResData={};
 var transData ={};
 var searchDet = {};
 var nor = {};
+var facet = {};
 main.clickme =function(){
 	alert("hey");
 }
@@ -136,10 +137,21 @@ main.doSea = function(searchResData) {
             searchTag = searchTag + '>' + searchResData.lab;
             urlList = urlList + "&q=" + searchResData.labTy + ":" + searchResData.lab;
         }
-        if(searchResData.level != undefined){
-            searchTag = searchTag + '>级别：' + searchResData.level;
-            urlList = urlList + "&fq=level:" + searchResData.level;
-        }        
+        // if(searchResData.level != undefined){
+        //     searchTag = searchTag + '>级别：' + searchResData.level;
+        //     urlList = urlList + "&fq=level:" + searchResData.level;
+        // }
+        if(searchResData.level != "" && searchResData.level != undefined){
+            var levels ="";
+            searchResData.level.forEach(function(level){
+                searchTag = searchTag + '>朝代：' + level;
+                levels = levels+","+level;
+            });
+            levels = levels.substring(1);
+            urlList = urlList + "&fq=level:" + levels;
+
+        }
+
         if(searchResData.dyn != "" && searchResData.dyn != undefined){
         	var dyns ="";
             searchResData.dyn.forEach(function(dyn){
